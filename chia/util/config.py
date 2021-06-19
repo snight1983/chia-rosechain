@@ -19,8 +19,6 @@ def create_default_chia_config(root_path: Path) -> None:
     for filename in ["config.yaml"]:
         default_config_file_data = initial_config_file(filename)
         path = config_path_for_filename(root_path, filename)
-        print("create_default_chia_config path:", root_path)
-        print("create_default_chia_config default_config_file_data:", default_config_file_data)
         mkdir(path.parent)
         with open(path, "w") as f:
             f.write(default_config_file_data)

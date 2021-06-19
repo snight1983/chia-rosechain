@@ -71,49 +71,47 @@ network_overrides: &network_overrides
       DIFFICULTY_STARTING: 30
   config:
     mainnet:
-      address_prefix: 'xch'
+      address_prefix: "xch"
       default_full_node_port: 8520
     testnet0:
-      address_prefix: 'txch'
+      address_prefix: "txch"
     testnet1:
-      address_prefix: 'txch'
+      address_prefix: "txch"
     testnet2:
-      address_prefix: 'txch'
+      address_prefix: "txch"
     testnet3:
-      address_prefix: 'txch'
+      address_prefix: "txch"
     testnet4:
-      address_prefix: 'txch'
+      address_prefix: "txch"
     testnet7:
-      address_prefix: 'txch'
-      default_full_node_port: 58520
+      address_prefix: "txch"
 
-selected_network: &selected_network 'mainnet'
+selected_network: &selected_network "mainnet"
 ALERTS_URL: https://download.chia.net/notify/mainnet_alert.txt
 CHIA_ALERTS_PUBKEY: 89b7fd87cb56e926ecefb879a29aae308be01f31980569f6a75a69d2a9a69daefd71fb778d865f7c50d6c967e3025937
 
 # public ssl ca is included in source code
 # Private ssl ca is used for trusted connections between machines user owns
 private_ssl_ca:
-  crt: 'config/ssl/ca/private_ca.crt'
-  key: 'config/ssl/ca/private_ca.key'
+  crt: "config/ssl/ca/private_ca.crt"
+  key: "config/ssl/ca/private_ca.key"
 
 chia_ssl_ca:
-  crt: 'config/ssl/ca/chia_ca.crt'
-  key: 'config/ssl/ca/chia_ca.key'
+  crt: "config/ssl/ca/chia_ca.crt"
+  key: "config/ssl/ca/chia_ca.key"
+
 
 daemon_ssl:
-  private_crt: 'config/ssl/daemon/private_daemon.crt'
-  private_key: 'config/ssl/daemon/private_daemon.key'
+  private_crt: "config/ssl/daemon/private_daemon.crt"
+  private_key: "config/ssl/daemon/private_daemon.key"
+
 
 # Controls logging of all servers (harvester, farmer, etc..). Each one can be overriden.
 logging: &logging
-  log_stdout: False # If True, outputs to stdout instead of a file
-  log_filename: 'log/debug.log'
-  log_level: 'WARNING' # Can be CRITICAL, ERROR, WARNING, INFO, DEBUG, NOTSET
+  log_stdout: False  # If True, outputs to stdout instead of a file
+  log_filename: "log/debug.log"
+  log_level: "WARNING"  # Can be CRITICAL, ERROR, WARNING, INFO, DEBUG, NOTSET
   log_maxfilesrotation: 7 #  Max files in rotation. Default value 7 if the key is not set
-  log_syslog: False
-  log_syslog_host: 'localhost'
-  log_syslog_port: 514
 
 harvester:
   # The harvester server (if run) will run on this port
@@ -136,16 +134,16 @@ harvester:
   plot_directories: []
 
   ssl:
-    private_crt: 'config/ssl/harvester/private_harvester.crt'
-    private_key: 'config/ssl/harvester/private_harvester.key'
+    private_crt:  "config/ssl/harvester/private_harvester.crt"
+    private_key:  "config/ssl/harvester/private_harvester.key"
 
   private_ssl_ca:
-    crt: 'config/ssl/ca/private_ca.crt'
-    key: 'config/ssl/ca/private_ca.key'
+    crt: "config/ssl/ca/private_ca.crt"
+    key: "config/ssl/ca/private_ca.key"
 
   chia_ssl_ca:
-    crt: 'config/ssl/ca/chia_ca.crt'
-    key: 'config/ssl/ca/chia_ca.key'
+    crt: "config/ssl/ca/chia_ca.crt"
+    key: "config/ssl/ca/chia_ca.key"
 
 pool:
   # Replace this with a real puzzle hash
@@ -181,10 +179,10 @@ farmer:
   selected_network: *selected_network
 
   ssl:
-    private_crt: 'config/ssl/farmer/private_farmer.crt'
-    private_key: 'config/ssl/farmer/private_farmer.key'
-    public_crt: 'config/ssl/farmer/public_farmer.crt'
-    public_key: 'config/ssl/farmer/public_farmer.key'
+    private_crt:  "config/ssl/farmer/private_farmer.crt"
+    private_key:  "config/ssl/farmer/private_farmer.key"
+    public_crt:  "config/ssl/farmer/public_farmer.crt"
+    public_key:  "config/ssl/farmer/public_farmer.key"
 
 # Don't run this unless you want to run VDF clients on the local machine.
 timelord_launcher:
@@ -236,10 +234,10 @@ timelord:
   sanitizer_mode: False
 
   ssl:
-    private_crt: 'config/ssl/timelord/private_timelord.crt'
-    private_key: 'config/ssl/timelord/private_timelord.key'
-    public_crt: 'config/ssl/timelord/public_timelord.crt'
-    public_key: 'config/ssl/timelord/public_timelord.key'
+    private_crt:  "config/ssl/timelord/private_timelord.crt"
+    private_key:  "config/ssl/timelord/private_timelord.key"
+    public_crt:  "config/ssl/timelord/public_timelord.crt"
+    public_key:  "config/ssl/timelord/public_timelord.key"
 
 full_node:
   # The full node server (if run) will run on this port
@@ -316,13 +314,13 @@ full_node:
   selected_network: *selected_network
 
   ssl:
-    private_crt: 'config/ssl/full_node/private_full_node.crt'
-    private_key: 'config/ssl/full_node/private_full_node.key'
-    public_crt: 'config/ssl/full_node/public_full_node.crt'
-    public_key: 'config/ssl/full_node/public_full_node.key'
+    private_crt:  "config/ssl/full_node/private_full_node.crt"
+    private_key:  "config/ssl/full_node/private_full_node.key"
+    public_crt:  "config/ssl/full_node/public_full_node.crt"
+    public_key:  "config/ssl/full_node/public_full_node.key"
 
 ui:
-  # The ui node server (if run) will run on this port
+   # The ui node server (if run) will run on this port
   port: 8221
 
   # Which port to use to communicate with the full node
@@ -354,19 +352,17 @@ introducer:
   selected_network: *selected_network
 
   ssl:
-    public_crt: 'config/ssl/full_node/public_full_node.crt'
-    public_key: 'config/ssl/full_node/public_full_node.key'
+    public_crt:  "config/ssl/full_node/public_full_node.crt"
+    public_key:  "config/ssl/full_node/public_full_node.key"
 
 wallet:
   port: 8439
   rpc_port: 9520
 
-  enable_profiler: False
-
   # The minimum height that we care about for our transactions. Set to zero
   # If we are restoring from private key and don't know the height.
   starting_height: 0
-  start_height_buffer: 100 # Wallet will stop fly sync at starting_height - buffer
+  start_height_buffer: 100  # Wallet will stop fly sync at starting_height - buffer
   num_sync_batches: 50
   initial_num_public_keys: 100
   initial_num_public_keys_new_wallet: 5
@@ -394,10 +390,10 @@ wallet:
     port: 8446
 
   ssl:
-    private_crt: 'config/ssl/wallet/private_wallet.crt'
-    private_key: 'config/ssl/wallet/private_wallet.key'
-    public_crt: 'config/ssl/wallet/public_wallet.crt'
-    public_key: 'config/ssl/wallet/public_wallet.key'
+    private_crt:  "config/ssl/wallet/private_wallet.crt"
+    private_key:  "config/ssl/wallet/private_wallet.key"
+    public_crt:  "config/ssl/wallet/public_wallet.crt"
+    public_key:  "config/ssl/wallet/public_wallet.key"
 
   trusted_peers:
-    trusted_node_1: 'config/ssl/full_node/public_full_node.crt'
+    trusted_node_1: "config/ssl/full_node/public_full_node.crt"
