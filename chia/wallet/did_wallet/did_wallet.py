@@ -56,8 +56,10 @@ class DIDWallet:
         self.base_puzzle_program = None
         self.base_inner_puzzle_hash = None
         self.standard_wallet = wallet
-        self.log = logging.getLogger(name if name else __name__)
-
+        if name:
+            self.log = logging.getLogger(name)
+        else:
+            self.log = logging.getLogger(__name__)
         if amount & 1 == 0:
             raise ValueError("DID amount must be odd number")
         self.wallet_state_manager = wallet_state_manager
@@ -135,7 +137,11 @@ class DIDWallet:
         self.base_puzzle_program = None
         self.base_inner_puzzle_hash = None
         self.standard_wallet = wallet
-        self.log = logging.getLogger(name if name else __name__)
+        if name:
+            self.log = logging.getLogger(name)
+        else:
+            self.log = logging.getLogger(__name__)
+
         self.wallet_state_manager = wallet_state_manager
         self.did_info = DIDInfo(None, [], uint64(0), [], None, None, None, None)
         info_as_string = json.dumps(self.did_info.to_json_dict())
@@ -159,7 +165,12 @@ class DIDWallet:
         name: str = None,
     ):
         self = DIDWallet()
-        self.log = logging.getLogger(name if name else __name__)
+
+        if name:
+            self.log = logging.getLogger(name)
+        else:
+            self.log = logging.getLogger(__name__)
+
         self.wallet_state_manager = wallet_state_manager
         self.wallet_info = wallet_info
         self.wallet_id = wallet_info.id
