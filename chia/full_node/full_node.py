@@ -1354,10 +1354,11 @@ class FullNode:
             self.old_peek_unfinish_cnt = 0
             self.old_peek_height = height
 
-        #if self.old_peek_unfinish_cnt > 2:
-        #    print("---> Too many blocks added, not adding unfinish bolcks Cnt:%d  | height:%d",
+        #if self.old_peek_unfinish_cnt > 50:
+        #    print("---> ---------- Too many blocks added, not adding unfinish bolcks",
         #          self.old_peek_unfinish_cnt, height)
         #    return
+        #print("---> +++++++++ adding unfinish bolcks", self.old_peek_unfinish_cnt, height)
 
         ses: Optional[SubEpochSummary] = next_sub_epoch_summary(
             self.constants,

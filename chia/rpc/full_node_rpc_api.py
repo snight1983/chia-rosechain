@@ -306,7 +306,7 @@ class FullNodeRpcApi:
         additional_difficulty_constant = self.service.constants.DIFFICULTY_CONSTANT_FACTOR
         eligible_plots_filter_multiplier = 2 ** self.service.constants.NUMBER_ZERO_BITS_PLOT_FILTER
 
-        expand: uint64 = uint64(2 ** 31)
+        expand: uint64 = uint64(2 ** 10)
 
         network_space_bytes_estimate = (
             UI_ACTUAL_SPACE_CONSTANT_FACTOR

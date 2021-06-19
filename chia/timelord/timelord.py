@@ -410,6 +410,9 @@ class Timelord:
                     # This proof is on an outdated challenge, so don't use it
                     continue
                 iters_from_sub_slot_start = cc_info.number_of_iterations + self.last_state.get_last_ip()
+
+                print("[_check_for_new_sp] signage_point_index", signage_point_index)
+
                 response = timelord_protocol.NewSignagePointVDF(
                     signage_point_index,
                     dataclasses.replace(cc_info, number_of_iterations=iters_from_sub_slot_start),
@@ -532,7 +535,7 @@ class Timelord:
                     )
                     msg = make_msg(ProtocolMessageTypes.new_infusion_point_vdf, response)
                     print("[_check_for_new_ip] new_infusion_point_vdf  signage_point_index:",
-                          block.reward_chain_block.signage_point_index)
+                          block.reward_chain_block.signage_point_index, challenge)
                     if self.server is not None:
                         await self.server.send_to_all([msg], NodeType.FULL_NODE)
 

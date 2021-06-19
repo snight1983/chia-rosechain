@@ -39,6 +39,7 @@ class TimelordAPI:
                 and self.timelord.last_state.peak.reward_chain_block == new_peak.reward_chain_block
             ):
                 log.info("Skipping peak, already have.")
+                print("Skipping peak, already have.")
                 return None
             else:
                 log.warning("block that we don't have, changing to it.")
