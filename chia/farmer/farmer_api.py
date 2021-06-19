@@ -37,7 +37,7 @@ class FarmerAPI:
             self.farmer.number_of_responses[new_proof_of_space.sp_hash] = 0
             self.farmer.cache_add_time[new_proof_of_space.sp_hash] = uint64(int(time.time()))
 
-        max_pos_per_sp = 20
+        max_pos_per_sp = 10
         if self.farmer.number_of_responses[new_proof_of_space.sp_hash] > max_pos_per_sp:
             # This will likely never happen for any farmer with less than 10% of global space
             # It's meant to make testnets more stable
