@@ -164,6 +164,7 @@ class Blockchain(BlockchainInterface):
         block: FullBlock,
         pre_validation_result: Optional[PreValidationResult] = None,
         fork_point_with_peak: Optional[uint32] = None,
+        summaries_to_check: List[SubEpochSummary] = None,  # passed only on long sync
     ) -> Tuple[ReceiveBlockResult, Optional[Err], Optional[uint32]]:
         """
         This method must be called under the blockchain lock
@@ -255,9 +256,9 @@ class Blockchain(BlockchainInterface):
         # Always add the block to the database
         async with self.block_store.db_wrapper.lock:
             try:
-                header_hash: bytes32 = block.header_hash
                 # Perform the DB operations to update the state, and rollback if something goes wrong
                 await self.block_store.db_wrapper.begin_transaction()
+                header_hash: bytes32 = block.header_hash
                 await self.block_store.add_full_block(header_hash, block, block_record)
                 fork_height, peak_height, records = await self._reconsider_peak(
                     block_record, genesis, fork_point_with_peak, npc_result
@@ -465,8 +466,6 @@ class Blockchain(BlockchainInterface):
                 sub_slot_total_iters = curr.ip_sub_slot_total_iters(self.constants)
                 # Start from the most recent
                 for rc in reversed(curr.finished_reward_slot_hashes):
-                    if sub_slot_total_iters < curr.sub_slot_iters:
-                        break
                     recent_rc.append((rc, sub_slot_total_iters))
                     sub_slot_total_iters = uint128(sub_slot_total_iters - curr.sub_slot_iters)
             curr = self.try_block_record(curr.prev_hash)
@@ -544,11 +543,7 @@ class Blockchain(BlockchainInterface):
         return PreValidationResult(None, required_iters, cost_result)
 
     async def pre_validate_blocks_multiprocessing(
-        self,
-        blocks: List[FullBlock],
-        npc_results: Dict[uint32, NPCResult],
-        batch_size: int = 4,
-        wp_summaries: Optional[List[SubEpochSummary]] = None,
+        self, blocks: List[FullBlock], npc_results: Dict[uint32, NPCResult], batch_size: int = 4
     ) -> Optional[List[PreValidationResult]]:
         return await pre_validate_blocks_multiprocessing(
             self.constants,
@@ -560,7 +555,6 @@ class Blockchain(BlockchainInterface):
             npc_results,
             self.get_block_generator,
             batch_size,
-            wp_summaries,
         )
 
     def contains_block(self, header_hash: bytes32) -> bool:
@@ -623,8 +617,6 @@ class Blockchain(BlockchainInterface):
                 del self.__block_records[header_hash]  # remove from blocks
             del self.__heights_in_cache[uint32(height)]  # remove height from heights in cache
 
-            if height == 0:
-                break
             height = height - 1
             blocks_to_remove = self.__heights_in_cache.get(uint32(height), None)
 
