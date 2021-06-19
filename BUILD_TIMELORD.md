@@ -9,7 +9,6 @@ the virtual environment.
 ```bash
 . ./activate
 
-chmod +x ./install-timelord.sh
 sh install-timelord.sh
 ```
 
