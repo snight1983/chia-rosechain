@@ -25,11 +25,6 @@ from chia.util.path import mkdir, path_from_root
 MAX_PEERS_RECEIVED_PER_REQUEST = 1000
 MAX_TOTAL_PEERS_RECEIVED = 3000
 MAX_CONCURRENT_OUTBOUND_CONNECTIONS = 70
-NETWORK_ID_DEFAULT_PORTS = {
-    "mainnet": 8520,
-    "testnet7": 58520,
-    "testnet8": 58445,
-}
 
 
 class FullNodeDiscovery:
@@ -42,20 +37,12 @@ class FullNodeDiscovery:
         introducer_info: Optional[Dict],
         dns_servers: List[str],
         peer_connect_interval: int,
-        selected_network: str,
-        default_port: Optional[int],
         log,
     ):
         self.server: ChiaServer = server
         self.message_queue: asyncio.Queue = asyncio.Queue()
         self.is_closed = False
         self.target_outbound_count = target_outbound_count
-        # This is a double check to make sure testnet and mainnet peer databases never mix up.
-        # If the network is not 'mainnet', it names the peer db differently, including the selected_network.
-        if selected_network != "mainnet":
-            if not peer_db_path.endswith(".sqlite"):
-                raise ValueError(f"Invalid path for peer table db: {peer_db_path}. Make the path end with .sqlite")
-            peer_db_path = peer_db_path[:-7] + "_" + selected_network + ".sqlite"
         self.peer_db_path = path_from_root(root_path, peer_db_path)
         self.dns_servers = dns_servers
         if introducer_info is not None:
@@ -76,16 +63,8 @@ class FullNodeDiscovery:
         self.serialize_task: Optional[asyncio.Task] = None
         self.cleanup_task: Optional[asyncio.Task] = None
         self.initial_wait: int = 0
-        try:
-            self.resolver = dns.asyncresolver.Resolver()
-        except Exception:
-            self.resolver = None
-            self.log.exception("Error initializing asyncresolver")
-        self.pending_outbound_connections: Set[str] = set()
-        self.pending_tasks: Set[asyncio.Task] = set()
-        self.default_port: Optional[int] = default_port
-        if default_port is None and selected_network in NETWORK_ID_DEFAULT_PORTS:
-            self.default_port = NETWORK_ID_DEFAULT_PORTS[selected_network]
+        self.resolver = dns.asyncresolver.Resolver()
+        self.pending_outbound_connections: Set = set()
 
     async def initialize_address_manager(self) -> None:
         mkdir(self.peer_db_path.parent)
@@ -109,10 +88,6 @@ class FullNodeDiscovery:
         self.cancel_task_safe(self.connect_peers_task)
         self.cancel_task_safe(self.serialize_task)
         self.cancel_task_safe(self.cleanup_task)
-        for t in self.pending_tasks:
-            self.cancel_task_safe(t)
-        if len(self.pending_tasks) > 0:
-            await asyncio.wait(self.pending_tasks)
         await self.connection.close()
 
     def cancel_task_safe(self, task: Optional[asyncio.Task]):
@@ -198,21 +173,13 @@ class FullNodeDiscovery:
 
     async def _query_dns(self, dns_address):
         try:
-            if self.default_port is None:
-                self.log.error(
-                    "Network id not supported in NETWORK_ID_DEFAULT_PORTS neither in config. Skipping DNS query."
-                )
-                return
-            if self.resolver is None:
-                self.log.warn("Skipping DNS query: asyncresolver not initialized.")
-                return
             peers: List[TimestampedPeerInfo] = []
             result = await self.resolver.resolve(qname=dns_address, lifetime=30)
             for ip in result:
                 peers.append(
                     TimestampedPeerInfo(
                         ip.to_text(),
-                        self.default_port,
+                        8444,
                         0,
                     )
                 )
@@ -221,11 +188,13 @@ class FullNodeDiscovery:
                 return
             await self._respond_peers_common(full_node_protocol.RespondPeers(peers), None, False)
         except Exception as e:
-            self.log.warn(f"querying DNS introducer failed: {e}")
+            self.log.error(f"Exception while querying DNS server: {e}")
 
     async def start_client_async(self, addr: PeerInfo, is_feeler: bool) -> None:
         try:
             if self.address_manager is None:
+                return
+            if addr.host in self.pending_outbound_connections:
                 return
             self.pending_outbound_connections.add(addr.host)
             client_connected = await self.server.start_client(
@@ -398,19 +367,15 @@ class FullNodeDiscovery:
                 if not initiate_connection:
                     connect_peer_interval += 15
                 connect_peer_interval = min(connect_peer_interval, self.peer_connect_interval)
-                if addr is not None and initiate_connection and addr.host not in self.pending_outbound_connections:
-                    if len(self.pending_outbound_connections) >= MAX_CONCURRENT_OUTBOUND_CONNECTIONS:
-                        self.log.debug("Max concurrent outbound connections reached. waiting")
-                        await asyncio.wait(self.pending_tasks, return_when=asyncio.FIRST_COMPLETED)
-                    self.pending_tasks.add(
-                        asyncio.create_task(self.start_client_async(addr, disconnect_after_handshake))
-                    )
-
+                if addr is not None and initiate_connection:
+                    while len(self.pending_outbound_connections) >= MAX_CONCURRENT_OUTBOUND_CONNECTIONS:
+                        self.log.debug(
+                            f"Max concurrent outbound connections reached. Retrying in {connect_peer_interval}s."
+                        )
+                        await asyncio.sleep(connect_peer_interval)
+                    self.log.debug(f"Creating connection task with {addr}.")
+                    asyncio.create_task(self.start_client_async(addr, disconnect_after_handshake))
                 await asyncio.sleep(connect_peer_interval)
-
-                # prune completed connect tasks
-                self.pending_task = set(filter(lambda t: not t.done(), self.pending_tasks))
-
             except Exception as e:
                 self.log.error(f"Exception in create outbound connections: {e}")
                 self.log.error(f"Traceback: {traceback.format_exc()}")
@@ -488,9 +453,6 @@ class FullNodeDiscovery:
 
 
 class FullNodePeers(FullNodeDiscovery):
-    self_advertise_task: Optional[asyncio.Task] = None
-    address_relay_task: Optional[asyncio.Task] = None
-
     def __init__(
         self,
         server,
@@ -501,8 +463,6 @@ class FullNodePeers(FullNodeDiscovery):
         introducer_info,
         dns_servers,
         peer_connect_interval,
-        selected_network,
-        default_port,
         log,
     ):
         super().__init__(
@@ -513,8 +473,6 @@ class FullNodePeers(FullNodeDiscovery):
             introducer_info,
             dns_servers,
             peer_connect_interval,
-            selected_network,
-            default_port,
             log,
         )
         self.relay_queue = asyncio.Queue()
@@ -529,8 +487,8 @@ class FullNodePeers(FullNodeDiscovery):
 
     async def close(self):
         await self._close_common()
-        self.cancel_task_safe(self.self_advertise_task)
-        self.cancel_task_safe(self.address_relay_task)
+        self.self_advertise_task.cancel()
+        self.address_relay_task.cancel()
 
     async def _periodically_self_advertise_and_clean_data(self):
         while not self.is_closed:
@@ -674,8 +632,6 @@ class WalletPeers(FullNodeDiscovery):
         introducer_info,
         dns_servers,
         peer_connect_interval,
-        selected_network,
-        default_port,
         log,
     ) -> None:
         super().__init__(
@@ -686,8 +642,6 @@ class WalletPeers(FullNodeDiscovery):
             introducer_info,
             dns_servers,
             peer_connect_interval,
-            selected_network,
-            default_port,
             log,
         )
 
