@@ -143,11 +143,8 @@ def migrate_from(
 
     # update config yaml with new keys
     config: Dict = load_config(new_root, "config.yaml")
-    print("migrate_from [1].config",config)
     config_str: str = initial_config_file("config.yaml")
-    print("migrate_from [2].config_str",config_str)
     default_config: Dict = yaml.safe_load(config_str)
-    print("migrate_from [3].default_config",default_config)
     flattened_keys = unflatten_properties({k: "" for k in do_not_migrate_settings})
     dict_add_new_default(config, default_config, flattened_keys)
 
@@ -246,13 +243,8 @@ def init(create_certs: Optional[Path], root_path: Path):
             else:
                 print(f"** Directory {create_certs} does not exist **")
         else:
-            print(f"** {root_path} does not exist. Executing core init **")
-            # sanity check here to prevent infinite recursion
-            if chia_init(root_path) == 0 and root_path.exists():
-                return init(create_certs, root_path)
-
-            print(f"** {root_path} was not created. Exiting **")
-            return -1
+            print(f"** {root_path} does not exist **")
+            print("** Please run `chia init` to migrate or create new config files **")
     else:
         return chia_init(root_path)
 
