@@ -169,8 +169,6 @@ class MempoolManager:
     def get_min_fee_increase() -> int:
         # 0.00001 XCH
         return 10000
-        #return 10000000
-        
 
     def can_replace(
         self,
@@ -217,10 +215,7 @@ class MempoolManager:
         """
         start_time = time.time()
         cached_result_bytes = await asyncio.get_running_loop().run_in_executor(
-            self.pool,
-            get_npc_multiprocess,
-            bytes(new_spend),
-            int(self.limit_factor * self.constants.MAX_BLOCK_COST_CLVM),
+            self.pool, get_npc_multiprocess, bytes(new_spend), self.constants.MAX_BLOCK_COST_CLVM
         )
         end_time = time.time()
         log.info(f"It took {end_time - start_time} to pre validate transaction")
