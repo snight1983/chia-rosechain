@@ -32,11 +32,11 @@ Love is not a business. If you like it, plant some and give it to him (her). Chi
 杂谈,为了沙巴克 | Miscellaneous, for Shabak 
 -----------------------------------------------------------
 公元2000年左右，一群70,80后的朋友疯狂爱上了一款火爆网络游戏 "传奇"！它多人的记忆中，留下了深深的痕迹。
-之后,各种私服如雨后春笋般出现。帮助我们体会到，官服难以体会感受。时至今日,各类传奇私服依然在网络世界战火纷飞。就比如,“大家好，我是渣渣辉"  O(∩_∩)O !!!
+之后,各种私服如雨后春笋般出现。帮助我们体会到，官服难以体会的感受。时至今日,各类传奇私服依然在网络世界战火纷飞。就比如,“大家好，我是渣渣辉"  O(∩_∩)O !!!
 
 
 Around 2000, a group of friends born in the 70s and 80s fell in love with a popular online game "Legend"! It left deep traces in the memories of many people.
-After that, various private servers have sprung up. Help us to realize that it is difficult for official uniforms to experience feelings. Today, all kinds of legendary private servers are still raging in the online world. For example, "Hello everyone, I am Zha Zhahui" O(∩_∩)O !!! 
+After that, various private servers have sprung up. Help us to experience the feelings that are difficult for official uniforms. Today, all kinds of legendary private servers are still raging in the online world. For example, "Hello everyone, I am Zha Zhahui" O(∩_∩)O !!! 
 
 QQ研讨群: 
 -----
