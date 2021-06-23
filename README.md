@@ -19,10 +19,18 @@ XCR百年总产量约22亿枚,其中社区储备8.8%以备发展,其余均通过
 
 
 
-QQ研讨群: 1056537190
+QQ研讨群: 
+-----
+1056537190
 
 download:
+-----
 https://github.com/snight1983/chia-rosechain/releases/tag/1.1.7
 
 db:
+-----
 https://mega.nz/file/iJQTmK7Z#kyWMBDVkXahbY3MewdD_h7YONKJB2W65LXLeVoMNDDw
+
+web
+----
+https://chiarose.com/
