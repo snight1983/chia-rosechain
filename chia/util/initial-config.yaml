@@ -71,20 +71,20 @@ network_overrides: &network_overrides
       DIFFICULTY_STARTING: 30
   config:
     mainnet:
-      address_prefix: "xch"
+      address_prefix: "xcr"
       default_full_node_port: 8520
     testnet0:
-      address_prefix: "txch"
+      address_prefix: "txcr"
     testnet1:
-      address_prefix: "txch"
+      address_prefix: "txcr"
     testnet2:
-      address_prefix: "txch"
+      address_prefix: "txcr"
     testnet3:
-      address_prefix: "txch"
+      address_prefix: "txcr"
     testnet4:
-      address_prefix: "txch"
+      address_prefix: "txcr"
     testnet7:
-      address_prefix: "txch"
+      address_prefix: "txcr"
 
 selected_network: &selected_network "mainnet"
 ALERTS_URL: https://download.chia.net/notify/mainnet_alert.txt
