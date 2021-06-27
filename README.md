@@ -12,11 +12,14 @@ After screening the works, they will be released in subsequent versions, and 52,
 
 Email: 51171107@qq.com    Or via Github 
 
-主要包括且不限于一下内容: Mainly include but not limited to the following content :
-\chia-blockchain-gui\public\favicon.ico
-\chia-blockchain-gui\src\assets\img\*.* 
-\chia-blockchain-gui\src\components\icons\images\*.*
+主要包括且不限于以下内容: Mainly include but not limited to the following  :
 
+\chia-blockchain-gui\public\favicon.ico
+---
+\chia-blockchain-gui\src\assets\img\*.* 
+---
+\chia-blockchain-gui\src\components\icons\images\*.*
+---
 
 
 
