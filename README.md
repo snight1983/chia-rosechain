@@ -66,10 +66,12 @@ download:
 -----
 https://github.com/snight1983/chia-rosechain/releases/tag/1.1.7
 
-db:
------
-https://mega.nz/file/iJQTmK7Z#kyWMBDVkXahbY3MewdD_h7YONKJB2W65LXLeVoMNDDw
 
 web
 ----
 https://chiarose.com/
+
+玫瑰园项目组小伙伴 Rose Garden Project Team Partner 
+---
+
+白玫瑰女孩 White rose girl 
