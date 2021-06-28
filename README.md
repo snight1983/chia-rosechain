@@ -75,5 +75,4 @@ https://chiarose.com/
 ---
 
 白玫瑰女孩 White rose girl 
-[image](https://github.com/snight1983/chia-rosechain/blob/main/partner/White%20rose%20girl%20.jpg)
-![Alt text](https://github.com/snight1983/chia-rosechain/blob/main/partner/White%20rose%20girl%20.jpg)
+![image](https://github.com/snight1983/chia-rosechain/blob/main/partner/White%20rose%20girl%20.jpg)
