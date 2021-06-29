@@ -67,7 +67,7 @@ download:
 https://github.com/snight1983/chia-rosechain/releases/tag/1.1.7
 ChiaRoseSetup-1.1.71.exe 
 Added some optimization of the transaction interface, welcome to try
-[!image](https://github.com/snight1983/chia-rosechain/blob/main/pic/1171.png)
+![image](https://github.com/snight1983/chia-rosechain/blob/main/pic/1171.png)
 
 
 web
