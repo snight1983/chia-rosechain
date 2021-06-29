@@ -75,3 +75,7 @@ https://chiarose.com/
 ---
 
 白玫瑰女孩 White rose girl 
+[image](https://github.com/snight1983/chia-rosechain/blob/main/partner/White%20rose%20girl%20.jpg)
+
+通过文档、视频等方式介绍项目进展，帮助大家更好的参与项目。Introduce the progress of the project through documents, videos, etc., to help everyone better participate in the project. 
+https://www.facebook.com/profile.php?id=100070148675799
