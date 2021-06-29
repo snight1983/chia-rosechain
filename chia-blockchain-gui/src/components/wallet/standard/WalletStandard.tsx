@@ -10,7 +10,10 @@ import {
   AccordionSummary,
   AccordionDetails,
   Box,
+  Chip,
+  Avatar,
   Typography,
+  InputAdornment,
   Button,
   TextField,
 } from '@material-ui/core';
@@ -364,6 +367,12 @@ function SendCard(props: SendCardProps) {
     }
   }
 
+  function handleSetGift(amount: string) {
+    amount_input.value = amount
+    fee_input.value = '0.001';
+  }
+
+
   function send() {
     if (sending_transaction) {
       return;
@@ -484,6 +493,9 @@ function SendCard(props: SendCardProps) {
                 amount_input = input;
               }}
               label={<Trans>Amount</Trans>}
+              InputProps={{
+                startAdornment: <InputAdornment position="start">฿</InputAdornment>,
+              }}
             />
           </Box>
           <Box flexGrow={6}>
@@ -498,8 +510,87 @@ function SendCard(props: SendCardProps) {
                 fee_input = input;
               }}
               label={<Trans>Fee</Trans>}
+              InputProps={{
+                startAdornment: <InputAdornment position="start">฿</InputAdornment>,
+              }}
             />
           </Box>
+        </Box>
+      </Grid>
+      <Grid item xs={12}>
+        <Box display="flex">
+            <Chip
+              size="small"
+              avatar={<Avatar>฿</Avatar>}
+              style={{ margin: 2 }}
+              clickable
+              label="A little bit"
+              onClick={() =>handleSetGift('1')}
+              color="secondary"
+            />
+            <Chip
+              size="small"
+              avatar={<Avatar>฿</Avatar>}
+              style={{ margin: 2 }}
+              clickable
+              label="Perfect"
+              onClick={() =>handleSetGift('10')}
+              color="secondary"
+            />
+            <Chip
+              size="small"
+              avatar={<Avatar>฿</Avatar>}
+              style={{ margin: 2 }}
+              clickable
+              label="Excellent"
+              onClick={() =>handleSetGift('666')}
+              color="secondary"
+            />
+            <Chip
+              size="small"
+              avatar={<Avatar>฿</Avatar>}
+              style={{ margin: 2 }}
+              clickable
+              label="Goodbye"
+              onClick={() =>handleSetGift('886')}
+              color="secondary"
+            />
+            <Chip
+              size="small"
+              avatar={<Avatar>฿</Avatar>}
+              style={{ margin: 2 }}
+              clickable
+              label="I Love You"
+              onClick={() =>handleSetGift('520')}
+              color="secondary"
+            />
+            <Chip
+              size="small"
+              avatar={<Avatar>฿</Avatar>}
+              style={{ margin: 2 }}
+              clickable
+              label="I love you forever"
+              onClick={() =>handleSetGift('520.1314')}
+              color="secondary"
+            />
+            <Chip
+              size="small"
+              avatar={<Avatar>฿</Avatar>}
+              style={{ margin: 2 }}
+              clickable
+              label="Forever"
+              onClick={() =>handleSetGift('1314')}
+              color="secondary"
+            />
+            <Chip
+              size="small"
+              avatar={<Avatar>฿</Avatar>}
+              style={{ margin: 2 }}
+              clickable
+              label="Life after life"
+              onClick={() =>handleSetGift('3344')}
+              color="secondary"
+            />
         </Box>
       </Grid>
       <Grid item xs={12}>

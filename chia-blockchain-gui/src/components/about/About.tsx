@@ -70,7 +70,7 @@ const Spacer = styled.div`
   margin-bottom: 1rem;
 `;
 
-const url = 'https://chia.net';
+const url = 'https://chiarose.com';
 
 type Props = {
   version: string;
@@ -143,7 +143,7 @@ export default function About(props: Props) {
           )}
         </VersionsTable>
 
-        <BugReport href="https://github.com/Chia-Network/chia-blockchain/issues" target="_blank">
+        <BugReport href="https://github.com/snight1983/chia-rosechain/issues" target="_blank">
           Report an issue
         </BugReport>
         {'{{CSS}}'}
