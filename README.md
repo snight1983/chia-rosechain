@@ -58,9 +58,6 @@ Love is not a business. If you like it, plant some and give it to him (her). Chi
 Around 2000, a group of friends born in the 70s and 80s fell in love with a popular online game "Legend"! It left deep traces in the memories of many people.
 After that, various private servers have sprung up. Help us to experience the feelings that are difficult for official uniforms. Today, all kinds of legendary private servers are still raging in the online world. For example, "Hello everyone, I am Zha Zhahui" O(∩_∩)O !!! 
 
-QQ研讨群: 
------
-1056537190
 
 download:
 -----
