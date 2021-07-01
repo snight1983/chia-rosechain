@@ -1,5 +1,15 @@
 # chia-rosechain
- 需求墙  Demand wall 
+
+ 
+一个无耻的小活动 | A shameless little event
+----
+如果您喜欢这个项目，请点击star 将赠送您520朵玫瑰，可以去 facebook 留下您的(xcr)地址，和github用户名。
+
+If you like this project, please click star and 520 roses will be presented to you. You can go to facebook to leave your (xcr)address and receive your github username . 
+
+https://www.facebook.com/profile.php?id=100070148675799
+
+需求墙  Demand wall 
 ----
 大量用户反应ChiaRose界面太难看.... 现征集美工大牛提供几套炫酷的皮肤资源， 望有能力制作者,踊跃参与。
 最终会筛选三款在后续版本发行(可于皮肤上冠名)。 作品通过筛选会赠送作者 52000 朵玫瑰(XCR)，作为答谢 !!!
