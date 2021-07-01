@@ -82,8 +82,8 @@ https://www.facebook.com/profile.php?id=100070148675799
  
 一个无耻的小活动 | A shameless little event
 ----
-如果您喜欢这个项目，请点击star 将赠送您520朵玫瑰，可以去 facebook 留下您的地址，github用户名。
+如果您喜欢这个项目，请点击star 将赠送您520朵玫瑰，可以去 facebook 留下您的(xcr)地址，和github用户名。
 
-If you like this project, please click star and 520 roses will be presented to you. You can go to facebook to leave your address and receive your github name. 
+If you like this project, please click star and 520 roses will be presented to you. You can go to facebook to leave your (xcr)address and receive your github username . 
 
 
