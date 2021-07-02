@@ -89,10 +89,9 @@ https://chiarose.com/
 通过文档、视频等方式介绍项目进展，帮助大家更好的参与项目。Introduce the progress of the project through documents, videos, etc., to help everyone better participate in the project. 
 https://www.facebook.com/profile.php?id=100070148675799
  
-一个无耻的小活动 | A shameless little event
+关于白皮书和路线图 | About the white paper and roadmap 
 ----
-如果您喜欢这个项目，请点击star 将赠送您520朵玫瑰，可以去 facebook 留下您的(xcr)地址，和github用户名。
-
-If you like this project, please click star and 520 roses will be presented to you. You can go to facebook to leave your (xcr)address and receive your github username . 
+白皮书同chia，路线图 ... ...emm 我们走在愉快玩耍路上，就这样吧。
+The white paper is the same as chia, the road map...emm We are walking on the road of happily playing, so be it. 
 
 
