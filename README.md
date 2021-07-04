@@ -9,26 +9,6 @@ If you like this project, please click star and 520 roses will be presented to y
 
 https://www.facebook.com/profile.php?id=100070148675799
 
-需求墙  Demand wall 
-----
-大量用户反应ChiaRose界面太难看.... 现征集美工大牛提供几套炫酷的皮肤资源， 望有能力制作者,踊跃参与。
-最终会筛选三款在后续版本发行(可于皮肤上冠名)。 作品通过筛选会赠送作者 52000 朵玫瑰(XCR)，作为答谢 !!!
-
-A large number of users say that the ChiaRose interface is too ugly.... Now we are calling for artists to provide several sets of cool skin resources, and we hope that those who have the ability to produce will actively participate. In the end, three models will be selected and released in subsequent versions (you can name them on the skin). 52000 roses (XCR) will be presented to the author after the works are screened as a thank you!!!
-
-
-Email: 51171107@qq.com    Or via Github 
-
-主要包括且不限于以下内容: Mainly include but not limited to the following  :
-
-\chia-blockchain-gui\public\favicon.ico
-
-\chia-blockchain-gui\src\assets\img\*.* 
-
-\chia-blockchain-gui\src\components\icons\images\*.*
-
-
-
 
 Chia采用了较为节能的区块链技术,它以较少的能源消耗创建共识。
 ----
