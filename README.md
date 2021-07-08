@@ -1,5 +1,11 @@
 # chia-rosechain
+关于1.1.8新包测试 | About 1.1.8 new package test 
+----
+Rose 跟随Chia社区，做了版本升级，暂时将包放在1.1.7Release之中，有兴趣的朋友欢迎积极测试，提出Bug。多谢了。理论上支持新协议，和新农田
 
+Rose followed the Chia community and made a version upgrade, temporarily putting the package in 1.1.7Release. Friends who are interested are welcome to actively test and raise bugs. Thanks a lot. Theoretically support the new agreement, and the new farmland 
+
+https://www.facebook.com/profile.php?id=100070148675799
  
 一个无耻的小活动 | A shameless little event
 ----
