@@ -5,7 +5,6 @@ Rose 跟随Chia社区，做了版本升级，暂时将包放在1.1.7Release之�
 
 Rose followed the Chia community and made a version upgrade, temporarily putting the package in 1.1.7Release. Friends who are interested are welcome to actively test and raise bugs. Thanks a lot. Theoretically support the new agreement, and the new farmland 
 
-https://www.facebook.com/profile.php?id=100070148675799
  
 一个无耻的小活动 | A shameless little event
 ----
