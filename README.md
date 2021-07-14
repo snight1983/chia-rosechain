@@ -8,12 +8,13 @@ Rose followed the Chia community and made a version upgrade, temporarily putting
  
 一个无耻的小活动 | A shameless little event
 ----
-如果您喜欢这个项目，请点击star 将赠送您520朵玫瑰，可以去 facebook 留下您的(xcr)地址，和github用户名。
+如果您喜欢这个项目，请点击star 将赠送您99(原来520)朵玫瑰，可以去 facebook 留下您的(xcr)地址，和github用户名。
 
-If you like this project, please click star and 520 roses will be presented to you. You can go to facebook to leave your (xcr)address and receive your github username . 
+If you like this project, please click star and 99(original 520) roses will be presented to you. You can go to facebook to leave your (xcr)address and receive your github username . 
 
 https://www.facebook.com/profile.php?id=100070148675799
 
+2021-7-15 effective  Before July 15, maintain 520 
 
 Chia采用了较为节能的区块链技术,它以较少的能源消耗创建共识。
 ----
