@@ -110,7 +110,7 @@ if (!handleSquirrelEvent()) {
   // if any of these checks return false, don't do any other initialization since the app is quitting
   if (ensureSingleInstance() && ensureCorrectEnvironment()) {
     // this needs to happen early in startup so all processes share the same global config
-    chiaConfig.loadConfig(chiaEnvironment.getChiaVersion());
+    chiaConfig.loadConfig('mainnet');
     global.sharedObj = { local_test };
 
     const exitPyProc = (e) => {};
@@ -195,8 +195,7 @@ if (!handleSquirrelEvent()) {
             title: i18n._(/* i18n */ { id: 'Confirm' }),
             message: i18n._(
               /* i18n */ {
-                id:
-                  'Are you sure you want to quit? GUI Plotting and farming will stop.',
+                id: 'Are you sure you want to quit? GUI Plotting and farming will stop.',
               },
             ),
           });
@@ -356,10 +355,10 @@ if (!handleSquirrelEvent()) {
         role: 'help',
         submenu: [
           {
-            label: i18n._(/* i18n */ { id: 'Chia Blockchain Wiki' }),
+            label: i18n._(/* i18n */ { id: 'Chia Rosechain Wiki' }),
             click: () => {
               openExternal(
-                'https://github.com/Chia-Network/chia-blockchain/wiki',
+                'https://github.com/snight1983/chia-rosechain/wiki',
               );
             },
           },
@@ -367,7 +366,7 @@ if (!handleSquirrelEvent()) {
             label: i18n._(/* i18n */ { id: 'Frequently Asked Questions' }),
             click: () => {
               openExternal(
-                'https://github.com/Chia-Network/chia-blockchain/wiki/FAQ',
+                'https://github.com/snight1983/chia-rosechain/wiki/FAQ',
               );
             },
           },
@@ -415,12 +414,12 @@ if (!handleSquirrelEvent()) {
     ];
 
     if (process.platform === 'darwin') {
-      // Chia Blockchain menu (Mac)
+      // Chia Rosechain menu (Mac)
       template.unshift({
         label: i18n._(/* i18n */ { id: 'Chia' }),
         submenu: [
           {
-                label: i18n._(/* i18n */ { id: 'About Chia Rosechain' }),
+            label: i18n._(/* i18n */ { id: 'About Chia Rosechain' }),
             click: () => {
               openAbout();
             },
@@ -507,7 +506,7 @@ if (!handleSquirrelEvent()) {
           type: 'separator',
         },
         {
-            label: i18n._(/* i18n */ { id: 'About Chia Rosechain' }),
+          label: i18n._(/* i18n */ { id: 'About Chia Rosechain' }),
           click() {
             openAbout();
           },

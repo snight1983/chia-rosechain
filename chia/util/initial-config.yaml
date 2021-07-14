@@ -2,7 +2,7 @@ min_mainnet_k_size: 32
 
 # Send a ping to all peers after ping_interval seconds
 ping_interval: 120
-self_hostname: &self_hostname 'localhost'
+self_hostname: &self_hostname "localhost"
 daemon_port: 55520
 inbound_rate_limit_percent: 100
 outbound_rate_limit_percent: 30
@@ -12,22 +12,22 @@ network_overrides: &network_overrides
     mainnet:
       NETWORK_TYPE: 0
       GENESIS_CHALLENGE: ccd5bb71183532bff220ba46c268991a3ff07eb358e8255a65c30a2dce0e5fbb
-      GENESIS_PRE_FARM_POOL_PUZZLE_HASH: '3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489'
-      GENESIS_PRE_FARM_FARMER_PUZZLE_HASH: '3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489'
+      GENESIS_PRE_FARM_POOL_PUZZLE_HASH: "3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489"
+      GENESIS_PRE_FARM_FARMER_PUZZLE_HASH: "3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489"
     testnet0:
       MIN_PLOT_SIZE: 18
       GENESIS_CHALLENGE: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       NETWORK_TYPE: 1
-      GENESIS_PRE_FARM_POOL_PUZZLE_HASH: '3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489'
-      GENESIS_PRE_FARM_FARMER_PUZZLE_HASH: '3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489'
+      GENESIS_PRE_FARM_POOL_PUZZLE_HASH: "3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489"
+      GENESIS_PRE_FARM_FARMER_PUZZLE_HASH: "3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489"
     testnet2:
       MIN_PLOT_SIZE: 18
       GENESIS_CHALLENGE: ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
       NETWORK_TYPE: 1
       INITIAL_FREEZE_PERIOD: 100
       DIFFICULTY_CONSTANT_FACTOR: 10052721566054
-      GENESIS_PRE_FARM_POOL_PUZZLE_HASH: '3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489'
-      GENESIS_PRE_FARM_FARMER_PUZZLE_HASH: '3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489'
+      GENESIS_PRE_FARM_POOL_PUZZLE_HASH: "3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489"
+      GENESIS_PRE_FARM_FARMER_PUZZLE_HASH: "3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489"
     testnet3:
       DIFFICULTY_CONSTANT_FACTOR: 10052721566054
       GENESIS_CHALLENGE: ca7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015af
@@ -41,7 +41,7 @@ network_overrides: &network_overrides
       GENESIS_CHALLENGE: dd7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015af
       GENESIS_PRE_FARM_FARMER_PUZZLE_HASH: 3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489
       GENESIS_PRE_FARM_POOL_PUZZLE_HASH: 3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489
-      INITIAL_FREEZE_END_TIMESTAMP: 1618776900 # Sun Apr 18 2021 16:15:00 GMT-0400 (Eastern Daylight Time)
+      INITIAL_FREEZE_END_TIMESTAMP: 1618776900  # Sun Apr 18 2021 16:15:00 GMT-0400 (Eastern Daylight Time)
       MIN_PLOT_SIZE: 18
       NETWORK_TYPE: 1
       MEMPOOL_BLOCK_BUFFER: 10
@@ -52,7 +52,7 @@ network_overrides: &network_overrides
       GENESIS_CHALLENGE: ee7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015af
       GENESIS_PRE_FARM_FARMER_PUZZLE_HASH: 3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489
       GENESIS_PRE_FARM_POOL_PUZZLE_HASH: 3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489
-      INITIAL_FREEZE_END_TIMESTAMP: 1618869600 # Mon Apr 19 2021 18:00:00 GMT-0400 (Eastern Daylight Time)
+      INITIAL_FREEZE_END_TIMESTAMP: 1618869600  # Mon Apr 19 2021 18:00:00 GMT-0400 (Eastern Daylight Time)
       MIN_PLOT_SIZE: 18
       NETWORK_TYPE: 1
       MEMPOOL_BLOCK_BUFFER: 10
@@ -63,7 +63,7 @@ network_overrides: &network_overrides
       GENESIS_CHALLENGE: 117816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015af
       GENESIS_PRE_FARM_FARMER_PUZZLE_HASH: 3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489
       GENESIS_PRE_FARM_POOL_PUZZLE_HASH: 3713d7224ccc17725fe3158f595834956bee22722b72226841d993160d14a489
-      INITIAL_FREEZE_END_TIMESTAMP: 1619661600 # Wed Apr 28 2021 22:00:00 GMT-0400 (Eastern Daylight Time)
+      INITIAL_FREEZE_END_TIMESTAMP: 1619661600  # Wed Apr 28 2021 22:00:00 GMT-0400 (Eastern Daylight Time)
       MIN_PLOT_SIZE: 18
       NETWORK_TYPE: 1
       MEMPOOL_BLOCK_BUFFER: 10
@@ -85,6 +85,7 @@ network_overrides: &network_overrides
       address_prefix: "txcr"
     testnet7:
       address_prefix: "txcr"
+      default_full_node_port: 58520
 
 selected_network: &selected_network "mainnet"
 ALERTS_URL: https://download.chia.net/notify/mainnet_alert.txt
@@ -112,6 +113,9 @@ logging: &logging
   log_filename: "log/debug.log"
   log_level: "WARNING"  # Can be CRITICAL, ERROR, WARNING, INFO, DEBUG, NOTSET
   log_maxfilesrotation: 7 #  Max files in rotation. Default value 7 if the key is not set
+  log_syslog: False  # If True, outputs to SysLog host and port specified
+  log_syslog_host: "localhost"  # Send logging messages to a remote or local Unix syslog
+  log_syslog_port: 15184  # UDP port of the remote or local Unix syslog
 
 harvester:
   # The harvester server (if run) will run on this port
@@ -152,6 +156,7 @@ pool:
   network_overrides: *network_overrides
   selected_network: *selected_network
 
+
 farmer:
   # The farmer server (if run) will run on this port
   port: 8547
@@ -191,6 +196,7 @@ timelord_launcher:
   # Number of VDF client processes to keep alive in the local machine.
   process_count: 3
   logging: *logging
+
 
 timelord:
   # The timelord server (if run) will run on this port
@@ -359,6 +365,8 @@ wallet:
   port: 8439
   rpc_port: 9520
 
+  enable_profiler: False
+
   # The minimum height that we care about for our transactions. Set to zero
   # If we are restoring from private key and don't know the height.
   starting_height: 0
@@ -397,3 +405,5 @@ wallet:
 
   trusted_peers:
     trusted_node_1: "config/ssl/full_node/public_full_node.crt"
+
+  short_sync_blocks_behind_threshold: 20

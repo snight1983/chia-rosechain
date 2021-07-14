@@ -38,10 +38,10 @@ from chia.util.streamable import recurse_jsonify
 log = logging.getLogger(__name__)
 
 
-def get_npc_multiprocess(spend_bundle_bytes: bytes, max_cost: int) -> bytes:
+def get_npc_multiprocess(spend_bundle_bytes: bytes, max_cost: int, cost_per_byte: int) -> bytes:
     program = simple_solution_generator(SpendBundle.from_bytes(spend_bundle_bytes))
     # npc contains names of the coins removed, puzzle_hashes and their spend conditions
-    return bytes(get_name_puzzle_conditions(program, max_cost, True))
+    return bytes(get_name_puzzle_conditions(program, max_cost, cost_per_byte=cost_per_byte, safe_mode=True))
 
 
 class MempoolManager:
@@ -57,7 +57,7 @@ class MempoolManager:
         self.coin_store = coin_store
 
         # The fee per cost must be above this amount to consider the fee "nonzero", and thus able to kick out other
-        # transactions. This prevents spam. This is equivalent to 0.055 XCH per block, or about 0.00005 XCH for two
+        # transactions. This prevents spam. This is equivalent to 0.055 XCR per block, or about 0.00005 XCR for two
         # spends.
         self.nonzero_fee_minimum_fpc = 5
 
@@ -167,7 +167,7 @@ class MempoolManager:
 
     @staticmethod
     def get_min_fee_increase() -> int:
-        # 0.00001 XCH
+        # 0.00001 XCR
         return 10000
 
     def can_replace(
@@ -215,7 +215,11 @@ class MempoolManager:
         """
         start_time = time.time()
         cached_result_bytes = await asyncio.get_running_loop().run_in_executor(
-            self.pool, get_npc_multiprocess, bytes(new_spend), self.constants.MAX_BLOCK_COST_CLVM
+            self.pool,
+            get_npc_multiprocess,
+            bytes(new_spend),
+            int(self.limit_factor * self.constants.MAX_BLOCK_COST_CLVM),
+            self.constants.COST_PER_BYTE,
         )
         end_time = time.time()
         log.info(f"It took {end_time - start_time} to pre validate transaction")
@@ -245,6 +249,8 @@ class MempoolManager:
         log.debug(f"Cost: {cost}")
 
         if cost > int(self.limit_factor * self.constants.MAX_BLOCK_COST_CLVM):
+            # we shouldn't ever end up here, since the cost is limited when we
+            # execute the CLVM program.
             return None, MempoolInclusionStatus.FAILED, Err.BLOCK_COST_EXCEEDS_MAX
 
         if npc_result.error is not None:
