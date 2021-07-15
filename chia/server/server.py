@@ -279,10 +279,11 @@ class ChiaServer:
                 await connection.close()
                 close_event.set()
             else:
-                if connection.connection_type is NodeType.FULL_NODE or connection.connection_type is NodeType.WALLET:
-                    peerInfoNew = connection.get_peer_info()
-                    if peerInfoNew is not None:
-                        if peerInfoNew.host is not '127.0.0.1':
+                if self._local_type is NodeType.FULL_NODE:
+                  if connection.connection_type is NodeType.FULL_NODE or connection.connection_type is NodeType.WALLET:
+                     peerInfoNew = connection.get_peer_info()
+                     if peerInfoNew is not None:
+                         if peerInfoNew.host is not '127.0.0.1':
                             print("[1] Peer New Host", peerInfoNew.host)
                             for _, connectionOld in self.all_connections.items():
                                 peerinfoOld = connectionOld.get_peer_info()
