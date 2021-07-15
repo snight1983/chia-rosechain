@@ -282,19 +282,19 @@ class ChiaServer:
                 if connection.connection_type is NodeType.FULL_NODE or connection.connection_type is NodeType.WALLET:
                     peerInfoNew = connection.get_peer_info()
                     if peerInfoNew is not None:
-                        print("[1] Peer New Host",
-                              peerInfoNew.host)
-                        for _, connectionOld in self.all_connections.items():
-                            peerinfoOld = connectionOld.get_peer_info()
-                            if peerinfoOld is not None:
-                                if peerInfoNew.host == peerinfoOld.host:
-                                    print(
-                                        "[2] Peer Old Host", peerinfoOld.host)
-                                    await connection.close()
-                                    close_event.set()
-                                    print("[3] Close Same:",
-                                          peerInfoNew.host)
-                                    return None
+                        if peerInfoNew.host is not '127.0.0.1':
+                            print("[1] Peer New Host", peerInfoNew.host)
+                            for _, connectionOld in self.all_connections.items():
+                                peerinfoOld = connectionOld.get_peer_info()
+                                if peerinfoOld is not None:
+                                    if peerInfoNew.host == peerinfoOld.host and connection.connection_type == connectionOld.connection_type:
+                                        print(
+                                            "[2] Peer Old Host", peerinfoOld.host)
+                                        await connection.close()
+                                        close_event.set()
+                                        print("[3] Close Same:",
+                                              peerInfoNew.host)
+                                        return None
                 await self.connection_added(connection, self.on_connect)
                 if self._local_type is NodeType.INTRODUCER and connection.connection_type is NodeType.FULL_NODE:
                     self.introducer_peers.add(connection.get_peer_info())
