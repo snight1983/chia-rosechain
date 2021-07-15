@@ -1,52 +1,42 @@
 # chia-rosechain
 
- 
-Ò»¸öÎŞ³ÜµÄĞ¡»î¶¯ | A shameless little event
-----
-Èç¹ûÄúÏ²»¶Õâ¸öÏîÄ¿£¬Çëµã»÷star ½«ÔùËÍÄú520¶äÃµ¹å£¬¿ÉÒÔÈ¥ facebook ÁôÏÂÄúµÄ(xcr)µØÖ·£¬ºÍgithubÓÃ»§Ãû¡£
-
-If you like this project, please click star and 520 roses will be presented to you. You can go to facebook to leave your (xcr)address and receive your github username . 
-
-https://www.facebook.com/profile.php?id=100070148675799
-
-
-Chia²ÉÓÃÁË½ÏÎª½ÚÄÜµÄÇø¿éÁ´¼¼Êõ,ËüÒÔ½ÏÉÙµÄÄÜÔ´ÏûºÄ´´½¨¹²Ê¶¡£
+Chiaé‡‡ç”¨äº†è¾ƒä¸ºèŠ‚èƒ½çš„åŒºå—é“¾æŠ€æœ¯,å®ƒä»¥è¾ƒå°‘çš„èƒ½æºæ¶ˆè€—åˆ›å»ºå…±è¯†ã€‚
 ----
 Chia uses a more energy-efficient blockchain technology, which creates a consensus with less energy consumption. 
 -----------------------------------------------------------
 
-ChiaRose ½«Ê¹ÓÃÕâ·İÀ´Ö®²»Ò×µÄ¼¼Êõ(¸ĞĞ»Chia)£¬¸´ÓÃChiaµÄ¹²Ê¶,ÈÃËüÔ­±¾¾Í»·±£µÄÄÜÔ´ÏûºÄ£¬³¢ÊÔ²úÉú¸ü¶àµÄÇø¿éÁ´¼ÛÖµ,»¶Ó­Ğ¡»ï°éÃÇÀ´Ò»Æğ´´ÔìÎ´À´!
+ChiaRose å°†ä½¿ç”¨è¿™ä»½æ¥ä¹‹ä¸æ˜“çš„æŠ€æœ¯(æ„Ÿè°¢Chia)ï¼Œå¤ç”¨Chiaçš„å…±è¯†,è®©å®ƒåŸæœ¬å°±ç¯ä¿çš„èƒ½æºæ¶ˆè€—ï¼Œå°è¯•äº§ç”Ÿæ›´å¤šçš„åŒºå—é“¾ä»·å€¼,æ¬¢è¿å°ä¼™ä¼´ä»¬æ¥ä¸€èµ·åˆ›é€ æœªæ¥!
 ChiaRose will use this hard-won technology (thanks to Chia), reuse Chia's consensus, let it use environmentally friendly energy consumption, and try to generate more blockchain value. Welcome friends to create the future together! 
 
 
-ÈçºÎÖÖÖ² How to grow 
+å¦‚ä½•ç§æ¤ How to grow 
 -----------------------------------------------------------
-Ê¹ÓÃXCR¿Í»§¶Ë,ÓÃChiaÖÆ×÷ºÃµÄÅ©ÌïÖ±½ÓÖÖÖ²¡£ÎÒÃÇµÄÔ¸¾°ÊÇÏ£ÍûÄÜÔ´Óë×ÊÔ´×î´ó»¯ÖØ¸´Ê¹ÓÃ¡£ÒòÎªÊ¹ÓÃÁËChiaÌïµÈ×ÊÔ´,Èôµ£ĞÄ·çÏÕ£¬¿ÉÒÔÓÃ¿ªÔ´´úÂëÖÆ×÷¿Í»§¶Ë¡£
+ä½¿ç”¨XCRå®¢æˆ·ç«¯,ç”¨Chiaåˆ¶ä½œå¥½çš„å†œç”°ç›´æ¥ç§æ¤ã€‚æˆ‘ä»¬çš„æ„¿æ™¯æ˜¯å¸Œæœ›èƒ½æºä¸èµ„æºæœ€å¤§åŒ–é‡å¤ä½¿ç”¨ã€‚å› ä¸ºä½¿ç”¨äº†Chiaç”°ç­‰èµ„æº,è‹¥æ‹…å¿ƒé£é™©ï¼Œå¯ä»¥ç”¨å¼€æºä»£ç åˆ¶ä½œå®¢æˆ·ç«¯ã€‚
 Use the XCR client to directly plant the farmland made by Chia. Our vision is to maximize the reuse of energy and resources. Because Chia Tian and other resources are used, if you are worried about risks, you can use open source code to create a client. 
 
 
-ÔõÃ´·ÖÅä How to allocate 
+æ€ä¹ˆåˆ†é… How to allocate 
 -----------------------------------------------------------
-XCR°ÙÄê×Ü²úÁ¿Ô¼22ÒÚÃ¶,ÆäÖĞÉçÇø´¢±¸8.8%ÒÔ±¸·¢Õ¹,ÆäÓà¾ùÍ¨¹ıÖÖÖ²»ñÈ¡! ³õÊ¼ÈıÄê, µ¥Çø¿é½±Àø200XCR,Ã¿ÈıÄê¼õ°ë,¸Ä±äÍ¨Ëõ/Í¨ÕÍ»úÖÆ£¬15Äêºóµ¥¿é½±Àøºã¶¨Îª1XCR.
+XCRç™¾å¹´æ€»äº§é‡çº¦22äº¿æš,å…¶ä¸­ç¤¾åŒºå‚¨å¤‡8.8%ä»¥å¤‡å‘å±•,å…¶ä½™å‡é€šè¿‡ç§æ¤è·å–! åˆå§‹ä¸‰å¹´, å•åŒºå—å¥–åŠ±200XCR,æ¯ä¸‰å¹´å‡åŠ,æ”¹å˜é€šç¼©/é€šèƒ€æœºåˆ¶ï¼Œ15å¹´åå•å—å¥–åŠ±æ’å®šä¸º1XCR.
 The total output of XCR in a century is about 2.2 billion, of which 8.8% is reserved by the community for development, and the rest is obtained through planting! In the first three years, a single block rewards 200XCR, which is halved every three years. The deflation/inflation mechanism is changed. The block reward is constant at 1XCR. 
 
 
 
-¹ØÓÚ½»Ò× About the transaction 
+å…³äºäº¤æ˜“ About the transaction 
 -----------------------------------------------------------
-°®Çé²»ÊÇÂòÂô£¬Ï²»¶¾ÍÖÖÖ²Ò»Ğ©ËÍ¸øËû(Ëı)¡£ChiaRose×÷ÎªÒ»¿î¸´¿ÌÁËChia¼¼ÊõµÄĞéÄâÅ©³¡, °®ÇéµÄ±£ÏÊÆÚ½«Ëæ×ÅChiaRose¸Ä±ä! ÕâÊÇÒ»´ÎÓĞÈ¤µÄÈ¥ÖĞĞÄ»¯Éç»áÊµÑé! ËüµÄ×÷ÓÃ²»ÊÇÎªÁË½»Ò×.
+çˆ±æƒ…ä¸æ˜¯ä¹°å–ï¼Œå–œæ¬¢å°±ç§æ¤ä¸€äº›é€ç»™ä»–(å¥¹)ã€‚ChiaRoseä½œä¸ºä¸€æ¬¾å¤åˆ»äº†ChiaæŠ€æœ¯çš„è™šæ‹Ÿå†œåœº, çˆ±æƒ…çš„ä¿é²œæœŸå°†éšç€ChiaRoseæ”¹å˜! è¿™æ˜¯ä¸€æ¬¡æœ‰è¶£çš„å»ä¸­å¿ƒåŒ–ç¤¾ä¼šå®éªŒ! å®ƒçš„ä½œç”¨ä¸æ˜¯ä¸ºäº†äº¤æ˜“.
 
 Love is not a business. If you like it, plant some and give it to him (her). ChiaRose is a virtual farm that replicates Chia technology, and the preservation period of love will change with ChiaRose! This is an interesting decentralized social experiment! Its function is not for transaction. 
 
 
-ÔÓÌ¸,ÎªÁËÉ³°Í¿Ë | Miscellaneous, for Shabak 
+æ‚è°ˆ,ä¸ºäº†æ²™å·´å…‹ | Miscellaneous, for Shabak 
 -----------------------------------------------------------
-¹«Ôª2000Äê×óÓÒ£¬Ò»Èº70,80ºóµÄÅóÓÑ·è¿ñ°®ÉÏÁËÒ»¿î»ğ±¬ÍøÂçÓÎÏ· "´«Ææ"£¡Ëü¶àÈËµÄ¼ÇÒäÖĞ£¬ÁôÏÂÁËÉîÉîµÄºÛ¼£¡£
-Ö®ºó,¸÷ÖÖË½·şÈçÓêºó´ºËñ°ã³öÏÖ¡£°ïÖúÎÒÃÇÌå»áµ½£¬¹Ù·şÄÑÒÔÌå»áµÄ¸ĞÊÜ¡£Ê±ÖÁ½ñÈÕ,¸÷Àà´«ÆæË½·şÒÀÈ»ÔÚÍøÂçÊÀ½çÕ½»ğ·×·É¡£¾Í±ÈÈç,¡°´ó¼ÒºÃ£¬ÎÒÊÇÔüÔü»Ô"  O(¡É_¡É)O !!!
+å…¬å…ƒ2000å¹´å·¦å³ï¼Œä¸€ç¾¤70,80åçš„æœ‹å‹ç–¯ç‹‚çˆ±ä¸Šäº†ä¸€æ¬¾ç«çˆ†ç½‘ç»œæ¸¸æˆ "ä¼ å¥‡"ï¼å®ƒå¤šäººçš„è®°å¿†ä¸­ï¼Œç•™ä¸‹äº†æ·±æ·±çš„ç—•è¿¹ã€‚
+ä¹‹å,å„ç§ç§æœå¦‚é›¨åæ˜¥ç¬‹èˆ¬å‡ºç°ã€‚å¸®åŠ©æˆ‘ä»¬ä½“ä¼šåˆ°ï¼Œå®˜æœéš¾ä»¥ä½“ä¼šçš„æ„Ÿå—ã€‚æ—¶è‡³ä»Šæ—¥,å„ç±»ä¼ å¥‡ç§æœä¾ç„¶åœ¨ç½‘ç»œä¸–ç•Œæˆ˜ç«çº·é£ã€‚å°±æ¯”å¦‚,â€œå¤§å®¶å¥½ï¼Œæˆ‘æ˜¯æ¸£æ¸£è¾‰"  O(âˆ©_âˆ©)O !!!
 
 
 Around 2000, a group of friends born in the 70s and 80s fell in love with a popular online game "Legend"! It left deep traces in the memories of many people.
-After that, various private servers have sprung up. Help us to experience the feelings that are difficult for official uniforms. Today, all kinds of legendary private servers are still raging in the online world. For example, "Hello everyone, I am Zha Zhahui" O(¡É_¡É)O !!! 
+After that, various private servers have sprung up. Help us to experience the feelings that are difficult for official uniforms. Today, all kinds of legendary private servers are still raging in the online world. For example, "Hello everyone, I am Zha Zhahui" O(âˆ©_âˆ©)O !!! 
 
 
 download:
@@ -60,18 +50,18 @@ web
 ----
 https://chiarose.com/
 
-Ãµ¹åÔ°ÏîÄ¿×éĞ¡»ï°é Rose Garden Project Team Partner 
+ç«ç‘°å›­é¡¹ç›®ç»„å°ä¼™ä¼´ Rose Garden Project Team Partner 
 ---
 
-°×Ãµ¹åÅ®º¢ White rose girl 
+ç™½ç«ç‘°å¥³å­© White rose girl 
 [image](https://github.com/snight1983/chia-rosechain/blob/main/partner/White%20rose%20girl%20.jpg)
 
-Í¨¹ıÎÄµµ¡¢ÊÓÆµµÈ·½Ê½½éÉÜÏîÄ¿½øÕ¹£¬°ïÖú´ó¼Ò¸üºÃµÄ²ÎÓëÏîÄ¿¡£Introduce the progress of the project through documents, videos, etc., to help everyone better participate in the project. 
+é€šè¿‡æ–‡æ¡£ã€è§†é¢‘ç­‰æ–¹å¼ä»‹ç»é¡¹ç›®è¿›å±•ï¼Œå¸®åŠ©å¤§å®¶æ›´å¥½çš„å‚ä¸é¡¹ç›®ã€‚Introduce the progress of the project through documents, videos, etc., to help everyone better participate in the project. 
 https://www.facebook.com/profile.php?id=100070148675799
  
-¹ØÓÚ°×Æ¤ÊéºÍÂ·ÏßÍ¼ | About the white paper and roadmap 
+å…³äºç™½çš®ä¹¦å’Œè·¯çº¿å›¾ | About the white paper and roadmap 
 ----
-°×Æ¤ÊéÍ¬chia£¬Â·ÏßÍ¼ ... ...emm ÎÒÃÇ×ßÔÚÓä¿ìÍæË£Â·ÉÏ£¬¾ÍÕâÑù°É¡£
+ç™½çš®ä¹¦åŒchiaï¼Œè·¯çº¿å›¾ ... ...emm æˆ‘ä»¬èµ°åœ¨æ„‰å¿«ç©è€è·¯ä¸Šï¼Œå°±è¿™æ ·å§ã€‚
 The white paper is the same as chia, the road map...emm We are walking on the road of happily playing, so be it. 
 
 
