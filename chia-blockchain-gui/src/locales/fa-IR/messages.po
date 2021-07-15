@@ -326,7 +326,11 @@ msgstr "چیـا"
 #~ msgstr "ویکی زنجیره بلوکی چیـا"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:148
-msgid "Chia Plots Contract Address"
+#~ msgid "Chia Plots Contract Address"
+#~ msgstr ""
+
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:148
+msgid "Chia Plots Contract Address(Not effective yet )"
 msgstr ""
 
 #: src/electron/main.tsx:358

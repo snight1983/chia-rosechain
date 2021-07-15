@@ -322,7 +322,11 @@ msgstr "치아"
 #~ msgstr "치아 블록체인 위키"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:148
-msgid "Chia Plots Contract Address"
+#~ msgid "Chia Plots Contract Address"
+#~ msgstr ""
+
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:148
+msgid "Chia Plots Contract Address(Not effective yet )"
 msgstr ""
 
 #: src/electron/main.tsx:358

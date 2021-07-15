@@ -494,7 +494,11 @@ msgstr "Чиа"
 #~ "Приведенная выше команда создает одио поле (указывается -n 1), для параллельного построения вам нужно повторить команду (не закрывая первую). Увеличьте значение -n для последовательного построения, то есть после завершения первого участка запускается следующий."
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:148
-msgid "Chia Plots Contract Address"
+#~ msgid "Chia Plots Contract Address"
+#~ msgstr ""
+
+#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:148
+msgid "Chia Plots Contract Address(Not effective yet )"
 msgstr ""
 
 #: src/electron/main.tsx:358
