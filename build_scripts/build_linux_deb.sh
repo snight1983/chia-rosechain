@@ -55,7 +55,7 @@ if [ "$LAST_EXIT_CODE" -ne 0 ]; then
 	exit $LAST_EXIT_CODE
 fi
 
-electron-packager . chiarose --asar.unpack="**/daemon/**" --platform=linux \
+electron-packager . chia-rosechain --asar.unpack="**/daemon/**" --platform=linux \
 --icon=src/assets/img/Chia.icns --overwrite --app-bundle-id=com.chia.rosechain \
 --appVersion=$CHIA_INSTALLER_VERSION
 LAST_EXIT_CODE=$?
