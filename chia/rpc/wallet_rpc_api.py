@@ -1138,7 +1138,8 @@ class WalletRpcApi:
                 continue
 
             if record.type == TransactionType.FEE_REWARD:
-                fee_amount += record.amount - calculate_base_farmer_reward(height)
+                fee_amount += record.amount - \
+                    calculate_base_farmer_reward(height)
                 farmer_reward_amount += calculate_base_farmer_reward(height)
             if height > last_height_farmed:
                 last_height_farmed = height

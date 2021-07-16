@@ -8,7 +8,7 @@ from chia.types.blockchain_format.sized_bytes import bytes32
 from chia.util.streamable import Streamable, streamable
 from chia.wallet.util.debug_spend_bundle import debug_spend_bundle
 
-from .coin_spend import CoinSpend
+from .coin_solution import CoinSolution
 
 
 @dataclass(frozen=True)
@@ -21,28 +21,28 @@ class SpendBundle(Streamable):
     between transactions are more flexible than in bitcoin).
     """
 
-    coin_spends: List[CoinSpend]
+    coin_solutions: List[CoinSolution]
     aggregated_signature: G2Element
 
     @classmethod
     def aggregate(cls, spend_bundles) -> "SpendBundle":
-        coin_spends: List[CoinSpend] = []
+        coin_solutions: List[CoinSolution] = []
         sigs: List[G2Element] = []
         for bundle in spend_bundles:
-            coin_spends += bundle.coin_spends
+            coin_solutions += bundle.coin_solutions
             sigs.append(bundle.aggregated_signature)
         aggregated_signature = AugSchemeMPL.aggregate(sigs)
-        return cls(coin_spends, aggregated_signature)
+        return cls(coin_solutions, aggregated_signature)
 
     def additions(self) -> List[Coin]:
         items: List[Coin] = []
-        for coin_spend in self.coin_spends:
-            items.extend(coin_spend.additions())
+        for coin_solution in self.coin_solutions:
+            items.extend(coin_solution.additions())
         return items
 
     def removals(self) -> List[Coin]:
         """This should be used only by wallet"""
-        return [_.coin for _ in self.coin_spends]
+        return [_.coin for _ in self.coin_solutions]
 
     def fees(self) -> int:
         """Unsafe to use for fees validation!!!"""

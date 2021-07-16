@@ -69,7 +69,7 @@ mv $DIR_NAME ../build_scripts/dist/
 cd ../build_scripts || exit
 
 if [ "$REDHAT_PLATFORM" = "x86_64" ]; then
-	echo "Create chia-blockchain-$CHIA_INSTALLER_VERSION.rpm"
+	echo "Create chia-rosechain-$CHIA_INSTALLER_VERSION.rpm"
   electron-installer-redhat --src dist/$DIR_NAME/ --dest final_installer/ \
   --arch "$REDHAT_PLATFORM" --options.version $CHIA_INSTALLER_VERSION \
   --license ../LICENSE

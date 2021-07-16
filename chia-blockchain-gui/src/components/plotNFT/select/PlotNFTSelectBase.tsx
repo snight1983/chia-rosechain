@@ -145,7 +145,7 @@ export default function PlotNFTSelectBase(props: Props) {
               variant="filled"
               color="secondary"
               fullWidth
-              label={<Trans>Chia Plots Contract Address(Not effective yet )</Trans>}
+              label={<Trans>Chia Plots Contract Address</Trans>}
             />
           </Grid>
           {!hideFee && (

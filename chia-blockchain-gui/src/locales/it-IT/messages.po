@@ -322,11 +322,7 @@ msgstr "Chia"
 #~ msgstr "Wiki della Blockchain Chia"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:148
-#~ msgid "Chia Plots Contract Address"
-#~ msgstr ""
-
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:148
-msgid "Chia Plots Contract Address(Not effective yet )"
+msgid "Chia Plots Contract Address"
 msgstr ""
 
 #: src/electron/main.tsx:358
@@ -1842,7 +1838,7 @@ msgid "Self Pooling"
 msgstr ""
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:105
-#~ msgid "Self pool. When you win a block you will earn XCR rewards."
+#~ msgid "Self pool. When you win a block you will earn XCH rewards."
 #~ msgstr ""
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:106

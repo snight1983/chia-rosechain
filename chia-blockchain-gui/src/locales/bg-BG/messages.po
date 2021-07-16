@@ -322,11 +322,7 @@ msgstr "Чиа"
 #~ msgstr "Чиа блокчейн Wiki"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:148
-#~ msgid "Chia Plots Contract Address"
-#~ msgstr ""
-
-#: src/components/plotNFT/select/PlotNFTSelectBase.tsx:148
-msgid "Chia Plots Contract Address(Not effective yet )"
+msgid "Chia Plots Contract Address"
 msgstr ""
 
 #: src/electron/main.tsx:358
