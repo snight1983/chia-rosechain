@@ -101,6 +101,7 @@ class Farmer:
         # A dictionary of keys to time added. These keys refer to keys in the above 4 dictionaries. This is used
         # to periodically clear the memory
         self.cache_add_time: Dict[bytes32, uint64] = {}
+        self.lastChannageTime = 0
 
         self.cache_clear_task: asyncio.Task
         self.update_pool_state_task: asyncio.Task

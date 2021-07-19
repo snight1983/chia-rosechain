@@ -250,7 +250,7 @@ msgstr "区块"
 msgid "Browse"
 msgstr "浏览"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:73
+#: src/components/farm/FarmLastAttemptedProof.tsx:77
 msgid "But you are currently farming <0/>"
 msgstr "但你目前正在耕种<0/>"
 
@@ -591,7 +591,7 @@ msgstr "注意：永久性删除私钥"
 #~ msgid "DIDListItems.title"
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:32
+#: src/components/farm/FarmLastAttemptedProof.tsx:36
 #: src/components/trading/TradingOverview.jsx:137
 #: src/components/wallet/WalletHistory.tsx:46
 msgid "Date"
@@ -1052,7 +1052,7 @@ msgstr "密钥"
 msgid "KiB Up/Down"
 msgstr "KiB 上传/下载"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:47
+#: src/components/farm/FarmLastAttemptedProof.tsx:51
 msgid "Last Attempted Proof"
 msgstr "最近尝试过的证明"
 
@@ -1236,7 +1236,7 @@ msgstr ""
 msgid "None"
 msgstr "无"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:68
+#: src/components/farm/FarmLastAttemptedProof.tsx:72
 msgid "None of your plots have passed the plot filter yet."
 msgstr "你的农田还没有通过过滤器检查."
 
@@ -1648,6 +1648,9 @@ msgstr "空间证明的大小"
 #: src/components/farm/FarmLastAttemptedProof.tsx:26
 msgid "Proofs Found"
 msgstr "已找到证明"
+
+msgid "Time Consuming(ms)"
+msgstr "耗时(毫秒)"
 
 #: src/components/pool/PoolInfo.tsx:22
 msgid "Protocol Version"
@@ -2173,7 +2176,7 @@ msgstr "此农田NFT尚未连接到玫瑰园。"
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:49
+#: src/components/farm/FarmLastAttemptedProof.tsx:53
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "这个表格里面显示的是你的农场尝试过的区块挑战. <0>了解更多</0>"
 
@@ -2188,6 +2191,10 @@ msgstr "该交易在链上的区块高度"
 #: src/components/app/AppTimeBombAlert.tsx:19
 msgid "This version of Chia is no longer compatible with the blockchain and can not safely farm."
 msgstr "此版本的奇亚客户端与区块链已经不再兼容，无法安全地种植。"
+
+#: src/components/farm/FarmLastAttemptedProof.tsx:30
+msgid "Time Consuming"
+msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"

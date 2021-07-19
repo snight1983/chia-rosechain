@@ -250,7 +250,7 @@ msgstr "Blokke"
 msgid "Browse"
 msgstr "Gennemse"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:73
+#: src/components/farm/FarmLastAttemptedProof.tsx:77
 msgid "But you are currently farming <0/>"
 msgstr "Men du høster lige nu <0/>"
 
@@ -591,7 +591,7 @@ msgstr "ADVARSEL: permanent sletning af privat nøgle"
 #~ msgid "DIDListItems.title"
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:32
+#: src/components/farm/FarmLastAttemptedProof.tsx:36
 #: src/components/trading/TradingOverview.jsx:137
 #: src/components/wallet/WalletHistory.tsx:46
 msgid "Date"
@@ -1052,7 +1052,7 @@ msgstr "Nøgler"
 msgid "KiB Up/Down"
 msgstr "KiB Op/Ned"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:47
+#: src/components/farm/FarmLastAttemptedProof.tsx:51
 msgid "Last Attempted Proof"
 msgstr "Sidste Prøvet Løsning"
 
@@ -1236,7 +1236,7 @@ msgstr ""
 msgid "None"
 msgstr "Ingen"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:68
+#: src/components/farm/FarmLastAttemptedProof.tsx:72
 msgid "None of your plots have passed the plot filter yet."
 msgstr "Ingen af dine plotfiler har passeret plotfilteret endnu."
 
@@ -2173,7 +2173,7 @@ msgstr "Dette plot NFT er ikke forbundet til pulje"
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:49
+#: src/components/farm/FarmLastAttemptedProof.tsx:53
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "Denne tabel viser hvornår din farmer sidst prøvede at vinde en blok udfordring. <0>Lær mere</0>"
 
@@ -2188,6 +2188,10 @@ msgstr "Denne handel blev inkluderet i blokkæden i denne blok"
 #: src/components/app/AppTimeBombAlert.tsx:19
 msgid "This version of Chia is no longer compatible with the blockchain and can not safely farm."
 msgstr "Denne version af Chia er ikke længere kompatibel med netværket og kan ikke farme."
+
+#: src/components/farm/FarmLastAttemptedProof.tsx:30
+msgid "Time Consuming"
+msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"

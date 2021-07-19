@@ -26,6 +26,10 @@ const cols = [
     title: <Trans>Proofs Found</Trans>,
   },
   {
+    field: 'timeconsuming',
+    title: <Trans>Time Consuming(ms)</Trans>,
+  },
+  {
     field(row: Row) {
       return moment(row.timestamp * 1000).format('MMM D, h:mm:ss A');
     },

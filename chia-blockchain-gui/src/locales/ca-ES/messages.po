@@ -250,7 +250,7 @@ msgstr "Blocs"
 msgid "Browse"
 msgstr "Navegar"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:73
+#: src/components/farm/FarmLastAttemptedProof.tsx:77
 msgid "But you are currently farming <0/>"
 msgstr "Però actualment estàs cultivant <0/>"
 
@@ -591,7 +591,7 @@ msgstr "PERILL: elimina definitivament la clau privada"
 #~ msgid "DIDListItems.title"
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:32
+#: src/components/farm/FarmLastAttemptedProof.tsx:36
 #: src/components/trading/TradingOverview.jsx:137
 #: src/components/wallet/WalletHistory.tsx:46
 msgid "Date"
@@ -1052,7 +1052,7 @@ msgstr "Claus"
 msgid "KiB Up/Down"
 msgstr "Kilobytes de pujada/baixada"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:47
+#: src/components/farm/FarmLastAttemptedProof.tsx:51
 msgid "Last Attempted Proof"
 msgstr "Darrera prova intentada"
 
@@ -1236,7 +1236,7 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:68
+#: src/components/farm/FarmLastAttemptedProof.tsx:72
 msgid "None of your plots have passed the plot filter yet."
 msgstr "Cap de les teves parcel·les ha passat encara el filtre de parcel·les."
 
@@ -2173,7 +2173,7 @@ msgstr ""
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:49
+#: src/components/farm/FarmLastAttemptedProof.tsx:53
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "Aquesta taula mostra l'última vegada que el teu cultiu va intentar guanyar un repte de blocs. <0>Més informació</0>"
 
@@ -2188,6 +2188,10 @@ msgstr "Aquesta transacció va ser inclosa en aquesta alçada de bloc"
 #: src/components/app/AppTimeBombAlert.tsx:19
 msgid "This version of Chia is no longer compatible with the blockchain and can not safely farm."
 msgstr "Aquesta versió de Chia ja no és compatible amb la cadena de blocs i pot no cultivar amb seguretat."
+
+#: src/components/farm/FarmLastAttemptedProof.tsx:30
+msgid "Time Consuming"
+msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"

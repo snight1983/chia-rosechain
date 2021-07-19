@@ -250,7 +250,7 @@ msgstr "Bloky"
 msgid "Browse"
 msgstr "Vybrať"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:73
+#: src/components/farm/FarmLastAttemptedProof.tsx:77
 msgid "But you are currently farming <0/>"
 msgstr "Ale aktuálne farmárčite <0/>"
 
@@ -591,7 +591,7 @@ msgstr "POZOR: natrvalo odstrániť súkromný klúč"
 #~ msgid "DIDListItems.title"
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:32
+#: src/components/farm/FarmLastAttemptedProof.tsx:36
 #: src/components/trading/TradingOverview.jsx:137
 #: src/components/wallet/WalletHistory.tsx:46
 msgid "Date"
@@ -1052,7 +1052,7 @@ msgstr "Kľúče"
 msgid "KiB Up/Down"
 msgstr "KiB Odoslané/Stiahnuté"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:47
+#: src/components/farm/FarmLastAttemptedProof.tsx:51
 msgid "Last Attempted Proof"
 msgstr "Posledný pokus o dôkaz"
 
@@ -1236,7 +1236,7 @@ msgstr ""
 msgid "None"
 msgstr "Žiadny"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:68
+#: src/components/farm/FarmLastAttemptedProof.tsx:72
 msgid "None of your plots have passed the plot filter yet."
 msgstr "Žiadne z vašich polí zatiaľ neprešlo filtrom polí."
 
@@ -2173,7 +2173,7 @@ msgstr "Tento NFT poľa nie je pripojený k združeniu"
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:49
+#: src/components/farm/FarmLastAttemptedProof.tsx:53
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "Táto tabuľka zobrazuje, kedy sa vaša farma naposledy pokúsila vyhrať blokovú výzvu. <0> Ďalšie informácie </0>"
 
@@ -2188,6 +2188,10 @@ msgstr "Tento obchod bol zahrnutý v blockchaine na tejto pozícii"
 #: src/components/app/AppTimeBombAlert.tsx:19
 msgid "This version of Chia is no longer compatible with the blockchain and can not safely farm."
 msgstr "Táto verzia Chii nie je kompatibilná s blockchainom a farmenie na nej nie je bezpečné."
+
+#: src/components/farm/FarmLastAttemptedProof.tsx:30
+msgid "Time Consuming"
+msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"

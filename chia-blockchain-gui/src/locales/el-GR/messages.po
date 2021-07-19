@@ -250,7 +250,7 @@ msgstr "Blocks"
 msgid "Browse"
 msgstr "Εξερεύνηση"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:73
+#: src/components/farm/FarmLastAttemptedProof.tsx:77
 msgid "But you are currently farming <0/>"
 msgstr "Αλλά επί του παρόντος κάνετε farming <0/>"
 
@@ -591,7 +591,7 @@ msgstr "ΚΙΝΔΥΝΟΣ: μόνιμη διαγραφή ιδιωτικού κλ�
 #~ msgid "DIDListItems.title"
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:32
+#: src/components/farm/FarmLastAttemptedProof.tsx:36
 #: src/components/trading/TradingOverview.jsx:137
 #: src/components/wallet/WalletHistory.tsx:46
 msgid "Date"
@@ -824,7 +824,7 @@ msgid "Fee"
 msgstr "Προμήθεια"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
-#~ msgid "Fee (TXCH)"
+#~ msgid "Fee (TXCR)"
 #~ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
@@ -1028,11 +1028,11 @@ msgid "Join a Pool"
 msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:44
-#~ msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
+#~ msgid "Join a pool and get consistent XCR farming rewards. The average returns are the same, but it is much less volatile."
 #~ msgstr ""
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:59
-#~ msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+#~ msgid "Join a pool and get consistent XCR farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
 #~ msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:44
@@ -1044,7 +1044,7 @@ msgid "Join a pool and get consistent XCR farming rewards. The average returns a
 msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:133
-#~ msgid "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
+#~ msgid "Join a pool and get more consistent XCR farming rewards. Create a plot NFT and assign your new plots to a group."
 #~ msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:133
@@ -1064,7 +1064,7 @@ msgstr "Κλειδιά"
 msgid "KiB Up/Down"
 msgstr "KiB Πάνω/Κάτω"
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:47
+#: src/components/farm/FarmLastAttemptedProof.tsx:51
 msgid "Last Attempted Proof"
 msgstr "Τελευταία Προσπάθεια Απόδειξης"
 
@@ -1248,7 +1248,7 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:68
+#: src/components/farm/FarmLastAttemptedProof.tsx:72
 msgid "None of your plots have passed the plot filter yet."
 msgstr "Κανένα από τα οικόπεδά σας δεν έχει περάσει ακόμα το φίλτρο οικόπεδον."
 
@@ -1282,7 +1282,7 @@ msgid "Not found Plots"
 msgstr "Δεν βρέθηκαν Οικόπεδα"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:184
-#~ msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
+#~ msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCR reward for pooling plots."
 #~ msgstr ""
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:184
@@ -1854,7 +1854,7 @@ msgid "Self Pooling"
 msgstr ""
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:105
-#~ msgid "Self pool. When you win a block you will earn XCH rewards."
+#~ msgid "Self pool. When you win a block you will earn XCR rewards."
 #~ msgstr ""
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:106
@@ -1911,7 +1911,7 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "Skips adding a final directory to harvester for farming"
 
 #: src/components/pool/PoolHero.tsx:26
-#~ msgid "Smooth out your XCH farming rewards by joining a pool."
+#~ msgid "Smooth out your XCR farming rewards by joining a pool."
 #~ msgstr ""
 
 #: src/components/pool/PoolHero.tsx:26
@@ -2028,23 +2028,23 @@ msgstr ""
 #~ msgstr "Syncing {progress}/{tip}"
 
 #: src/components/farm/card/FarmCardBlockRewards.tsx:15
-#~ msgid "TXCH Block Rewards"
+#~ msgid "TXCR Block Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardCoinbaseRewards.tsx:12
-#~ msgid "TXCH Farming Rewards"
+#~ msgid "TXCR Farming Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardFeesReward.tsx:12
-#~ msgid "TXCH Fees Collected"
+#~ msgid "TXCR Fees Collected"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:12
-#~ msgid "TXCH User Fees"
-#~ msgstr "TXCH User Fees"
+#~ msgid "TXCR User Fees"
+#~ msgstr "TXCR User Fees"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:15
-#~ msgid "TXCH User Transaction Fees"
+#~ msgid "TXCR User Transaction Fees"
 #~ msgstr ""
 
 #: src/components/pool/PoolInfo.tsx:37
@@ -2121,7 +2121,7 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Το συνολικό ποσό των τελών των συναλλαγών σε αυτό το μπλοκ. Ανταμοιβή στον αγρότη."
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:87
-#~ msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+#~ msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCR address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
 #~ msgstr ""
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:87
@@ -2201,7 +2201,7 @@ msgstr ""
 #~ msgid "This table shows you the last time your farm attempted to win a block challenge."
 #~ msgstr ""
 
-#: src/components/farm/FarmLastAttemptedProof.tsx:49
+#: src/components/farm/FarmLastAttemptedProof.tsx:53
 msgid "This table shows you the last time your farm attempted to win a block challenge. <0>Learn more</0>"
 msgstr "Αυτός ο πίνακας σας δείχνει την τελευταία φορά που το farm σας προσπάθησε να κερδίσει ένα block challenge. <0>Μάθετε περισσότερα</0>"
 
@@ -2216,6 +2216,10 @@ msgstr "Αυτή η συναλλαγή συμπεριλήφθηκε στο block
 #: src/components/app/AppTimeBombAlert.tsx:19
 msgid "This version of Chia is no longer compatible with the blockchain and can not safely farm."
 msgstr "Αυτή η έκδοση του Chia δεν είναι πλέον συμβατή με το blockchain και δεν μπορεί να γίνει farm με ασφάλεια."
+
+#: src/components/farm/FarmLastAttemptedProof.tsx:30
+msgid "Time Consuming"
+msgstr ""
 
 #: src/components/fullNode/FullNode.jsx:92
 msgid "Time Created"
