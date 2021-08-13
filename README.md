@@ -1,6 +1,6 @@
 # CHIA-ROSE
 
-Web & Explorer & :
+Web & Explorer
 ---
 https://chiarose.com/      ====> https://rosechain.net/
 
