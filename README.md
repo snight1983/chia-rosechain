@@ -31,3 +31,6 @@ Purpose of pooling:
 'Chia's new Plots make it impossible to obtain 100% of the revenue from the forked currency. Rose's solution can ensure that miners get 100% income, but it is not the optimal solution. I hope that other small partners of forked coins can provide better solutions. '
 
 
+When to perform the hard fork :
+---
+At present, we are replacing full nodes and vdf, deploying synchronous mining pool nodes, etc. After these basic settings are completed, a new version of the installation package and source code will be provided. This upgrade is planned to be carried out on August 22, 2021, Beijing time. Please look forward to it. 
