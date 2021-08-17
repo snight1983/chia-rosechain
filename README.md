@@ -2,7 +2,7 @@
 
 Web & Explorer
 ---
-https://chiarose.com/      ====> https://rosechain.net/
+https://www.rosechain.net/
 
 Chia officially informed that it is not allowed to use the chiarose domain name, so it will be updated to the rosechain domain name later. Recently, I have been busy cracking the chia Nft Plot. Update the official website after the completion.
 
