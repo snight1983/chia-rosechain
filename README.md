@@ -28,7 +28,7 @@ JoinPool: https://github.com/snight1983/chia-rosechain/wiki/How-to-Join-Rose-Poo
 
 Purpose of pooling: 
 
-'Chia's new Plots make it impossible to obtain 100% of the revenue from the forked currency. Rose's solution can ensure that miners get 100% income, but it is not the optimal solution. I hope that other small partners of forked coins can provide better solutions. '
+'Chia's new Plots make it impossible to obtain 100% of the revenue from the forked currency. Rose's solution can ensure that miners get 100% income, but it is not the optimal solution. I hope that other partners of forked coins can provide better solutions. '
 
 
 When to perform the hard fork :
