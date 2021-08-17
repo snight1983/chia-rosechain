@@ -22,8 +22,8 @@ Pool:
 ---
 Src:      https://github.com/snight1983/rose-garden
 
-Demopool: http://pool.rosechain.net:8080
+DemoPool: http://pool.rosechain.net:8080
 
-Join:     https://github.com/snight1983/chia-rosechain/wiki/How-to-Join-Rose-Pool-:-)
+JoinPool:     https://github.com/snight1983/chia-rosechain/wiki/How-to-Join-Rose-Pool-:-)
 
 
