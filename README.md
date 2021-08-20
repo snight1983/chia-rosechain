@@ -66,7 +66,7 @@ I hope that this upgrade can be successful, and a successful NftPlots cracking s
 What's next for Rose?  Emotional NFT Metaverse 
 ---
 What needs to be done?
-1. For your lover, bind Rose address.
+1. For your lover, bind Rose address. Rose will be used as fuel
 2. Emotional meta-universe creator.
 3. The publisher on the chain.
 4. IPFS storage tools.
