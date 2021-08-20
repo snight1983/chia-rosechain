@@ -72,6 +72,7 @@ What needs to be done?
 4. IPFS storage tools.
 5. Emotional metaverse, browser.
 ... ...
+
 It will be very challenging and fun to build step by step. 
 
 Hope she will come soon ...
