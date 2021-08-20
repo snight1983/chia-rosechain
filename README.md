@@ -62,6 +62,15 @@ Stay tuned :)
 Little hope:
 I hope that this upgrade can be successful, and a successful NftPlots cracking scheme can be verified with unforked coins. At the same time, I also hope that the developers of forked coins can provide better solutions. 
 
-What's next for Rose?  Emotional Nft Metaverse 
+
+What's next for Rose?  Emotional NFT Metaverse 
 ---
+What needs to be done?
+1. For your lover, bind Rose address.
+2. Emotional meta-universe creator.
+3. The publisher on the chain.
+4. IPFS storage tools.
+5. Emotional meta-universe, browser.
+... ...
+It will be very challenging and fun to build step by step. 
 Hope she will come soon 
