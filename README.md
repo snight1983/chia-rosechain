@@ -70,7 +70,7 @@ What needs to be done?
 2. Emotional metaverse creator.
 3. The publisher on the chain.
 4. IPFS storage tools.
-5. Emotional meta-universe, browser.
+5. Emotional metaverse, browser.
 ... ...
 It will be very challenging and fun to build step by step. 
 
