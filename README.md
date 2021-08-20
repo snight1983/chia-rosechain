@@ -62,3 +62,6 @@ Stay tuned :)
 Little hope:
 I hope that this upgrade can be successful, and a successful NftPlots cracking scheme can be verified with unforked coins. At the same time, I also hope that the developers of forked coins can provide better solutions. 
 
+What's next for Rose?  Emotional Nft Metaverse 
+---
+Hope she will come soon 
