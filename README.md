@@ -73,4 +73,5 @@ What needs to be done?
 5. Emotional meta-universe, browser.
 ... ...
 It will be very challenging and fun to build step by step. 
-Hope she will come soon 
+
+Hope she will come soon ...
