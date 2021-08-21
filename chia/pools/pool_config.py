@@ -49,9 +49,12 @@ def load_pool_config(root_path: Path) -> List[PoolWalletConfig]:
                     pool_config_dict["pool_url"],
                     pool_config_dict["payout_instructions"],
                     hexstr_to_bytes(pool_config_dict["target_puzzle_hash"]),
-                    hexstr_to_bytes(pool_config_dict["p2_singleton_puzzle_hash"]),
-                    G1Element.from_bytes(hexstr_to_bytes(pool_config_dict["owner_public_key"])),
-                    G1Element.from_bytes(hexstr_to_bytes(pool_config_dict["authentication_public_key"])),
+                    hexstr_to_bytes(
+                        pool_config_dict["p2_singleton_puzzle_hash"]),
+                    G1Element.from_bytes(hexstr_to_bytes(
+                        pool_config_dict["owner_public_key"])),
+                    G1Element.from_bytes(hexstr_to_bytes(
+                        pool_config_dict["authentication_public_key"])),
                 )
                 ret_list.append(pool_config)
             except Exception as e:
@@ -62,5 +65,6 @@ def load_pool_config(root_path: Path) -> List[PoolWalletConfig]:
 
 async def update_pool_config(root_path: Path, pool_config_list: List[PoolWalletConfig]):
     full_config = load_config(root_path, "config.yaml")
-    full_config["pool"]["pool_list"] = [c.to_json_dict() for c in pool_config_list]
+    full_config["pool"]["pool_list"] = [c.to_json_dict()
+                                        for c in pool_config_list]
     save_config(root_path, "config.yaml", full_config)

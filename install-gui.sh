@@ -14,7 +14,7 @@ if [ "$(id -u)" = 0 ]; then
 	exit 1
 fi
 
-# Allows overriding the branch or commit to build in chia-blockchain-gui
+# Allows overriding the branch or commit to build in chia-rosechain-gui
 SUBMODULE_BRANCH=$1
 
 UBUNTU=false
@@ -38,7 +38,7 @@ if [ "$(uname)" = "Linux" ]; then
 	elif type yum && [ -f /etc/rocky-release ] || [ -f /etc/fedora-release ]; then
                 # RockyLinux
                 echo "Installing on RockyLinux/Fedora"
-                dnf module enable nodejs:12
+                sudo dnf module enable nodejs:12
                 sudo dnf install -y nodejs
         fi
 
@@ -80,7 +80,7 @@ if [ ! "$CI" ]; then
 	echo "Running git submodule update."
 	echo ""
 	git submodule update
-	cd chia-blockchain-gui
+	cd chia-rosechain-gui
 
 	if [ "$SUBMODULE_BRANCH" ];
 	then
@@ -102,4 +102,4 @@ fi
 echo ""
 echo "Chia blockchain install-gui.sh completed."
 echo ""
-echo "Type 'cd chia-blockchain-gui' and then 'npm run electron &' to start the GUI."
+echo "Type 'cd chia-rosechain-gui' and then 'npm run electron &' to start the GUI."

@@ -3,7 +3,7 @@ import sys
 import time
 from datetime import datetime
 from decimal import Decimal
-from typing import Callable, List, Optional, Tuple
+from typing import Callable, List, Optional, Tuple, Dict
 
 import aiohttp
 
@@ -190,7 +190,7 @@ async def get_wallet(wallet_client: WalletRpcClient, fingerprint: int = None) ->
             use_cloud = True
             if "backup_path" in log_in_response:
                 path = log_in_response["backup_path"]
-                print(f"Backup file from backup.chiarose.com downloaded and written to: {path}")
+                print(f"Backup file from backup.rosechain.net downloaded and written to: {path}")
                 val = input("Do you want to use this file to restore from backup? (Y/N) ")
                 if val.lower() == "y":
                     log_in_response = await wallet_client.log_in_and_restore(fingerprint, path)
@@ -223,7 +223,9 @@ async def get_wallet(wallet_client: WalletRpcClient, fingerprint: int = None) ->
     return wallet_client, fingerprint
 
 
-async def execute_with_wallet(wallet_rpc_port: int, fingerprint: int, extra_params: dict, function: Callable) -> None:
+async def execute_with_wallet(
+    wallet_rpc_port: Optional[int], fingerprint: int, extra_params: Dict, function: Callable
+) -> None:
     try:
         config = load_config(DEFAULT_ROOT_PATH, "config.yaml")
         self_hostname = config["self_hostname"]

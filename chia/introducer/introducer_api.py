@@ -51,7 +51,6 @@ class IntroducerAPI:
                 break
 
         self.introducer.log.info(f"Sending vetted {peers}")
-        print("--> Sending vetted peers:", peers)
 
         msg = make_msg(ProtocolMessageTypes.respond_peers_introducer, RespondPeersIntroducer(peers))
         return msg

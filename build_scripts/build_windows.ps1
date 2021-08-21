@@ -34,15 +34,15 @@ pip install pyinstaller==4.2
 pip install setuptools_scm
 
 Write-Output "   ---"
-Write-Output "Get CHIA_INSTALLER_VERSION"
-# The environment variable CHIA_INSTALLER_VERSION needs to be defined
-$env:CHIA_INSTALLER_VERSION = python .\build_scripts\installer-version.py -win
+Write-Output "Get ROSE_INSTALLER_VERSION"
+# The environment variable ROSE_INSTALLER_VERSION needs to be defined
+$env:ROSE_INSTALLER_VERSION = python .\build_scripts\installer-version.py -win
 
-if (-not (Test-Path env:CHIA_INSTALLER_VERSION)) {
-  $env:CHIA_INSTALLER_VERSION = '0.0.0'
-  Write-Output "WARNING: No environment variable CHIA_INSTALLER_VERSION set. Using 0.0.0"
+if (-not (Test-Path env:ROSE_INSTALLER_VERSION)) {
+  $env:ROSE_INSTALLER_VERSION = '0.0.0'
+  Write-Output "WARNING: No environment variable ROSE_INSTALLER_VERSION set. Using 0.0.0"
   }
-Write-Output "Chia Version is: $env:CHIA_INSTALLER_VERSION"
+Write-Output "Rose Version is: $env:ROSE_INSTALLER_VERSION"
 Write-Output "   ---"
 
 Write-Output "   ---"
@@ -64,16 +64,16 @@ Write-Output "pip install chia-rosechain"
 pip install --no-index --find-links=.\win_build\ chia-rosechain
 
 Write-Output "   ---"
-Write-Output "Use pyinstaller to create chia .exe's"
+Write-Output "Use pyinstaller to create rose .exe's"
 Write-Output "   ---"
 $SPEC_FILE = (python -c 'import chia; print(chia.PYINSTALLER_SPEC_PATH)') -join "`n"
 pyinstaller --log-level INFO $SPEC_FILE
 
 Write-Output "   ---"
-Write-Output "Copy chia executables to chia-blockchain-gui\"
+Write-Output "Copy chia executables to chia-rosechain-gui\"
 Write-Output "   ---"
-Copy-Item "dist\daemon" -Destination "..\chia-blockchain-gui\" -Recurse
-Set-Location -Path "..\chia-blockchain-gui" -PassThru
+Copy-Item "dist\daemon" -Destination "..\chia-rosechain-gui\" -Recurse
+Set-Location -Path "..\chia-rosechain-gui" -PassThru
 
 git status
 
@@ -102,14 +102,14 @@ Write-Output "Increase the stack for chia command for (chia plots create) chiapo
 editbin.exe /STACK:8000000 daemon\chia.exe
 Write-Output "   ---"
 
-$packageVersion = "$env:CHIA_INSTALLER_VERSION"
-$packageName = "ChiaRose-$packageVersion"
+$packageVersion = "$env:ROSE_INSTALLER_VERSION"
+$packageName = "Rose-$packageVersion"
 
 Write-Output "packageName is $packageName"
 
 Write-Output "   ---"
 Write-Output "electron-packager"
-electron-packager . ChiaRose --asar.unpack="**\daemon\**" --overwrite --icon=.\src\assets\img\chia.ico --app-version=$packageVersion
+electron-packager . Rose --asar.unpack="**\daemon\**" --overwrite --icon=.\src\assets\img\chia.ico --app-version=$packageVersion
 Write-Output "   ---"
 
 Write-Output "   ---"
@@ -123,8 +123,8 @@ If ($env:HAS_SECRET) {
    Write-Output "   ---"
    Write-Output "Add timestamp and verify signature"
    Write-Output "   ---"
-   signtool.exe timestamp /v /t http://timestamp.comodoca.com/ .\release-builds\windows-installer\ChiaRoseSetup-$packageVersion.exe
-   signtool.exe verify /v /pa .\release-builds\windows-installer\ChiaRoseSetup-$packageVersion.exe
+   signtool.exe timestamp /v /t http://timestamp.comodoca.com/ .\release-builds\windows-installer\Rose-$packageVersion.exe
+   signtool.exe verify /v /pa .\release-builds\windows-installer\Rose-$packageVersion.exe
    }   Else    {
    Write-Output "Skipping timestamp and verify signatures - no authorization to install certificates"
 }

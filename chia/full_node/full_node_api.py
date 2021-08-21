@@ -806,7 +806,7 @@ class FullNodeAPI:
                 farmer_ph = self.full_node.constants.GENESIS_PRE_FARM_FARMER_PUZZLE_HASH
             else:
                 farmer_ph = request.farmer_puzzle_hash
-                if request.proof_of_space.pool_contract_puzzle_hash is not None:
+                if request.proof_of_space.pool_contract_puzzle_hash is not None and request.pool_target is None:
                     pool_target = PoolTarget(request.proof_of_space.pool_contract_puzzle_hash, uint32(0))
                 else:
                     assert request.pool_target is not None

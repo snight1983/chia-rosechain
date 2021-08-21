@@ -12,16 +12,16 @@ else
 fi
 
 pip install setuptools_scm
-# The environment variable CHIA_INSTALLER_VERSION needs to be defined
+# The environment variable ROSE_INSTALLER_VERSION needs to be defined
 # If the env variable NOTARIZE and the username and password variables are
 # set, this will attempt to Notarize the signed DMG
-CHIA_INSTALLER_VERSION=$(python installer-version.py)
+ROSE_INSTALLER_VERSION=$(python installer-version.py)
 
-if [ ! "$CHIA_INSTALLER_VERSION" ]; then
-	echo "WARNING: No environment variable CHIA_INSTALLER_VERSION set. Using 0.0.0."
-	CHIA_INSTALLER_VERSION="0.0.0"
+if [ ! "$ROSE_INSTALLER_VERSION" ]; then
+	echo "WARNING: No environment variable ROSE_INSTALLER_VERSION set. Using 0.0.0."
+	ROSE_INSTALLER_VERSION="0.0.0"
 fi
-echo "Chia Installer Version is: $CHIA_INSTALLER_VERSION"
+echo "Rose Installer Version is: $ROSE_INSTALLER_VERSION"
 
 echo "Installing npm and electron packagers"
 npm install electron-packager -g
@@ -41,9 +41,9 @@ if [ "$LAST_EXIT_CODE" -ne 0 ]; then
 	exit $LAST_EXIT_CODE
 fi
 
-cp -r dist/daemon ../chia-blockchain-gui
+cp -r dist/daemon ../chia-rosechain-gui
 cd .. || exit
-cd chia-blockchain-gui || exit
+cd chia-rosechain-gui || exit
 
 echo "npm build"
 npm install
@@ -57,7 +57,7 @@ fi
 
 electron-packager . chia-rosechain --asar.unpack="**/daemon/**" --platform=linux \
 --icon=src/assets/img/Chia.icns --overwrite --app-bundle-id=com.chia.rosechain \
---appVersion=$CHIA_INSTALLER_VERSION
+--appVersion=$ROSE_INSTALLER_VERSION
 LAST_EXIT_CODE=$?
 if [ "$LAST_EXIT_CODE" -ne 0 ]; then
 	echo >&2 "electron-packager failed!"
@@ -67,11 +67,11 @@ fi
 mv $DIR_NAME ../build_scripts/dist/
 cd ../build_scripts || exit
 
-echo "Create chia-$CHIA_INSTALLER_VERSION.deb"
+echo "Create chia-rosechain-$ROSE_INSTALLER_VERSION.deb"
 rm -rf final_installer
 mkdir final_installer
 electron-installer-debian --src dist/$DIR_NAME/ --dest final_installer/ \
---arch "$PLATFORM" --options.version $CHIA_INSTALLER_VERSION
+--arch "$PLATFORM" --options.version $ROSE_INSTALLER_VERSION
 LAST_EXIT_CODE=$?
 if [ "$LAST_EXIT_CODE" -ne 0 ]; then
 	echo >&2 "electron-installer-debian failed!"

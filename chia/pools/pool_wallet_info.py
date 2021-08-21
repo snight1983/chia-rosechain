@@ -70,11 +70,13 @@ def initial_pool_state_from_dict(state_dict: Dict, owner_pubkey: G1Element, owne
         pool_url: str = ""
         relative_lock_height = uint32(0)
     elif singleton_state == FARMING_TO_POOL:
-        target_puzzle_hash = bytes32(hexstr_to_bytes(state_dict["target_puzzle_hash"]))
+        target_puzzle_hash = bytes32(
+            hexstr_to_bytes(state_dict["target_puzzle_hash"]))
         pool_url = state_dict["pool_url"]
         relative_lock_height = uint32(state_dict["relative_lock_height"])
     else:
-        raise ValueError("Initial state must be SELF_POOLING or FARMING_TO_POOL")
+        raise ValueError(
+            "Initial state must be SELF_POOLING or FARMING_TO_POOL")
 
     # TODO: change create_pool_state to return error messages, as well
     assert relative_lock_height is not None
@@ -89,9 +91,11 @@ def create_pool_state(
     relative_lock_height: uint32,
 ) -> PoolState:
     if state not in set(s.value for s in PoolSingletonState):
-        raise AssertionError("state {state} is not a valid PoolSingletonState,")
+        raise AssertionError(
+            "state {state} is not a valid PoolSingletonState,")
     ps = PoolState(
-        POOL_PROTOCOL_VERSION, uint8(state), target_puzzle_hash, owner_pubkey, pool_url, relative_lock_height
+        POOL_PROTOCOL_VERSION, uint8(
+            state), target_puzzle_hash, owner_pubkey, pool_url, relative_lock_height
     )
     # TODO Move verify here
     return ps
@@ -102,7 +106,7 @@ def create_pool_state(
 class PoolWalletInfo(Streamable):
     """
     Internal Pool Wallet state, not destined for the blockchain. This can be completely derived with
-    the Singleton's CoinSolutions list, or with the information from the WalletPoolStore.
+    the Singleton's CoinSpends list, or with the information from the WalletPoolStore.
     """
 
     current: PoolState

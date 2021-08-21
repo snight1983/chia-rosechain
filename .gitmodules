@@ -1,5 +1,5 @@
-[submodule "chia-blockchain-gui"]
-	path = chia-blockchain-gui
+[submodule "chia-rosechain-gui"]
+	path = chia-rosechain-gui
 	url = https://github.com/Chia-Network/chia-blockchain-gui.git
 	branch = pools
 [submodule "mozilla-ca"]

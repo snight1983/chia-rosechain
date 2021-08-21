@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: "${{ github.event.inputs.chia_ref }}"
-          repository: chia-network/chia-blockchain
+          repository: chia-network/chia-rosechain
           submodules: recursive
           token: "${{ secrets.GITHUB_TOKEN }}"
       - name: "Add changes to new branch"

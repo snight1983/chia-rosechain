@@ -1111,13 +1111,11 @@ class WalletRpcApi:
 
     async def get_farmed_amount(self, request):
         tx_records: List[TransactionRecord] = await self.service.wallet_state_manager.tx_store.get_farming_rewards()
-        print("get_farmed_amount:...")
         amount = 0
         pool_reward_amount = 0
         farmer_reward_amount = 0
         fee_amount = 0
         last_height_farmed = 0
-
         for record in tx_records:
             isAdd = False
             if record.wallet_id not in self.service.wallet_state_manager.wallets:
@@ -1138,8 +1136,7 @@ class WalletRpcApi:
                 continue
 
             if record.type == TransactionType.FEE_REWARD:
-                fee_amount += record.amount - \
-                    calculate_base_farmer_reward(height)
+                fee_amount += record.amount - calculate_base_farmer_reward(height)
                 farmer_reward_amount += calculate_base_farmer_reward(height)
             if height > last_height_farmed:
                 last_height_farmed = height
