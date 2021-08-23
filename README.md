@@ -63,7 +63,7 @@ Little hope:
 I hope that this upgrade can be successful, and a successful NftPlots cracking scheme can be verified with unforked coins. At the same time, I also hope that the developers of forked coins can provide better solutions. 
 
 
-What's next for Rose?  Emotional NFT Metaverse  
+What's next for Rose?  1 Emotional NFT Metaverse  
 ---
 What needs to be done?
 1. For your lover, bind Rose address. Rose will be used as fuel
@@ -76,3 +76,7 @@ What needs to be done?
 It will be very challenging and fun to build step by step. 
 
 Hope she will come soon ...
+
+What's next for Rose? 2. Blockless mining
+---
+It’s just a preliminary idea. Planting with heavy blocks is very costly. Is it possible that you can mine normally without blocks?
