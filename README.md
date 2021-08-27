@@ -10,7 +10,7 @@ I apologize for the great trouble caused by the domain name issue to the chia of
 
 https://rosechain.posat.io/
 
-https://twitter.com/wang21928445
+https://twitter.com/snight40751451
 
 https://www.facebook.com/profile.php?id=100070148675799
 
