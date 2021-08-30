@@ -18,6 +18,8 @@ https://www.youtube.com/channel/UCjIoEfbicwNm93geTwkgO2w
 
 https://space.bilibili.com/590572700/dynamic
 
+https://keybase.io/team/rosechainnet
+
 Pool:
 ---
 Src:      https://github.com/snight1983/rose-garden
