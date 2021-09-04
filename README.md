@@ -8,7 +8,7 @@ Chia officially informed that it is not allowed to use the chiarose domain name,
 
 I apologize for the great trouble caused by the domain name issue to the chia official... 
 
-https://rosechain.posat.io/
+https://alltheblocks.net/rose
 
 https://twitter.com/snight40751451
 
