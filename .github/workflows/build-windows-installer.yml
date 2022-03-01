@@ -56,7 +56,7 @@ jobs:
           ${{ runner.os }}-pip-
 
 #  We can't upgrade to Python 3.8 until we have a miniupnpc binary
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v3
       name: Install Python 3.9
       with:
         python-version: "3.9"
