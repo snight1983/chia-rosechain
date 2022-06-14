@@ -40,7 +40,7 @@ jobs:
       run: bash build_scripts/clean-runner.sh || true
 
     - name: Setup Python environment
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
 
