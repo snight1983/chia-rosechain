@@ -32,7 +32,7 @@ jobs:
     - name: Get npm cache directory
       id: npm-cache
       run: |
-        echo "::set-output name=dir::$(npm config get cache)"
+        echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
 
     - name: Cache npm
       uses: actions/cache@v2.1.6
@@ -45,7 +45,7 @@ jobs:
     - name: Get pip cache dir
       id: pip-cache
       run: |
-        echo "::set-output name=dir::$(pip cache dir)"
+        echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
 
     - name: Cache pip
       uses: actions/cache@v2.1.6
@@ -69,7 +69,7 @@ jobs:
         unset HAS_AWS_SECRET
 
         if [ -n "$SIGNING_SECRET" ]; then HAS_SIGNING_SECRET='true' ; fi
-        echo "::set-output name=HAS_SIGNING_SECRET::${HAS_SIGNING_SECRET}"
+        echo "HAS_SIGNING_SECRET=${HAS_SIGNING_SECRET}" >> $GITHUB_OUTPUT
 
         if [ -n "$AWS_SECRET" ]; then HAS_AWS_SECRET='true' ; fi
         echo ::set-output name=HAS_AWS_SECRET::${HAS_AWS_SECRET}
@@ -93,7 +93,7 @@ jobs:
         pip3 install setuptools_scm
         $env:ROSE_INSTALLER_VERSION = python .\build_scripts\installer-version.py -win
         echo "$env:ROSE_INSTALLER_VERSION"
-        echo "::set-output name=ROSE_INSTALLER_VERSION::$env:ROSE_INSTALLER_VERSION"
+        echo "ROSE_INSTALLER_VERSION=$env:ROSE_INSTALLER_VERSION" >> $GITHUB_OUTPUT
         deactivate
 
     - name: Build Windows installer with build_scripts\build_windows.ps1
@@ -172,8 +172,8 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       id: tag-name
       run: |
-        echo "::set-output name=TAG_NAME::$(echo ${{ github.ref }} | cut -d'/' -f 3)"
-        echo "::set-output name=REPO_NAME::$(echo ${{ github.repository }} | cut -d'/' -f 2)"
+        echo "TAG_NAME=$(echo ${{ github.ref }} | cut -d'/' -f 3)" >> $GITHUB_OUTPUT
+        echo "REPO_NAME=$(echo ${{ github.repository }} | cut -d'/' -f 2)" >> $GITHUB_OUTPUT
 
     - name: Mark installer complete
       if: startsWith(github.ref, 'refs/tags/')

@@ -56,7 +56,7 @@ jobs:
     - name: Get pip cache dir
       id: pip-cache
       run: |
-        echo "::set-output name=dir::$(pip cache dir)"
+        echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
 
     - name: Cache pip
       uses: actions/cache@v2.1.6
@@ -112,7 +112,7 @@ jobs:
       id: version_number
       run: |
         . ./activate
-        echo "::set-output name=ROSE_INSTALLER_VERSION::$(rose version)"
+        echo "ROSE_INSTALLER_VERSION=$(rose version)" >> $GITHUB_OUTPUT
 
     - name: Upload MacOS artifacts
       uses: actions/upload-artifact@v2
