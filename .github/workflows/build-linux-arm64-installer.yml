@@ -45,7 +45,7 @@ jobs:
         python3 -m venv ../venv
         . ../venv/bin/activate
         pip3 install setuptools_scm
-        echo "ROSE_INSTALLER_VERSION=$(python3 ./build_scripts/installer-version.py)" >> $GITHUB_OUTPUT
+        echo "ROSE_INSTALLER_VERSION=$(python3 ./build_scripts/installer-version.py)" >> "$GITHUB_OUTPUT"
         deactivate
 
     - name: Test for secrets access
@@ -145,8 +145,8 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       id: tag-name
       run: |
-        echo "TAG_NAME=$(echo ${{ github.ref }} | cut -d'/' -f 3)" >> $GITHUB_OUTPUT
-        echo "REPO_NAME=$(echo ${{ github.repository }} | cut -d'/' -f 2)" >> $GITHUB_OUTPUT
+        echo "TAG_NAME=$(echo ${{ github.ref }} | cut -d'/' -f 3)" >> "$GITHUB_OUTPUT"
+        echo "REPO_NAME=$(echo ${{ github.repository }} | cut -d'/' -f 2)" >> "$GITHUB_OUTPUT"
 
     - name: Mark installer complete
       if: startsWith(github.ref, 'refs/tags/')

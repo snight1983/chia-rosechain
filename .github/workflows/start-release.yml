@@ -15,8 +15,8 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         id: tag-name
         run: |
-          echo "TAG_NAME=$(echo ${{ github.ref }} | cut -d'/' -f 3)" >> $GITHUB_OUTPUT
-          echo "REPO_NAME=$(echo ${{ github.repository }} | cut -d'/' -f 2)" >> $GITHUB_OUTPUT
+          echo "TAG_NAME=$(echo ${{ github.ref }} | cut -d'/' -f 3)" >> "$GITHUB_OUTPUT"
+          echo "REPO_NAME=$(echo ${{ github.repository }} | cut -d'/' -f 2)" >> "$GITHUB_OUTPUT"
       - name: Start release
         if: startsWith(github.ref, 'refs/tags/')
         run: |
