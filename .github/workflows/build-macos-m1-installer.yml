@@ -58,7 +58,7 @@ jobs:
           arch -arm64 python3 -m venv ../venv
           . ../venv/bin/activate
           arch -arm64 pip install setuptools_scm
-          echo "::set-output name=ROSE_INSTALLER_VERSION::$(arch -arm64 python3 ./build_scripts/installer-version.py)"
+          echo "ROSE_INSTALLER_VERSION=$(arch -arm64 python3 ./build_scripts/installer-version.py)" >> "$GITHUB_OUTPUT"
           deactivate
 
       # This will be recreated in the next step
@@ -149,8 +149,8 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         id: tag-name
         run: |
-          echo "::set-output name=TAG_NAME::$(echo ${{ github.ref }} | cut -d'/' -f 3)"
-          echo "::set-output name=REPO_NAME::$(echo ${{ github.repository }} | cut -d'/' -f 2)"
+          echo "TAG_NAME=$(echo ${{ github.ref }} | cut -d'/' -f 3)" >> "$GITHUB_OUTPUT"
+          echo "REPO_NAME=$(echo ${{ github.repository }} | cut -d'/' -f 2)" >> "$GITHUB_OUTPUT"
 
       - name: Mark installer complete
         if: startsWith(github.ref, 'refs/tags/')
